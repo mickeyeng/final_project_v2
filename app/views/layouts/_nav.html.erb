@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <%= link_to("MyUel", root_path, class: "navbar-brand") %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- collect the nav links, forms, and other content for toggeling -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <% if user_signed_in?  %>
+          <%= yield :right_nav %>
+
+
+        <li class="nav-item active">
+          <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+          <%= link_to("Home", root_path, class: "nav-link" ) %><span class="sr-only">(current)</span>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_user.username %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to("Settings", edit_user_registration_path, class: "dropdown-item") %>
+            <div class="dropdown-divider"></div>
+            <%= link_to("Logout", destroy_user_session_path, method: :delete, class: "dropdown-item") %>
+   
+          </div>
+        </li>
+        <% else %>
+          <%= link_to("Login", new_user_session_path, class: "nav-item nav-link") %>
+          <%= link_to("Sign_up", new_user_registration_path, class: "nav-item nav-link") %>
+        <% end %>
+      </ul>
+    </div> <!-- navbar collapse -->
+  </div> <!-- container -->
+</nav>
+
