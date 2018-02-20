@@ -1,9 +1,29 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @chatroom.name %>
-</p>
+<div class="chatroom-grid">
+	<div class="sidebar"> 
 
-<%= link_to 'Edit', edit_chatroom_path(@chatroom) %> |
-<%= link_to 'Back', chatrooms_path %>
+		<% if user_signed_in? %>
+        <h5> Current Chatrooms</h5>
+        <ul>
+          <% current_user.chatrooms.each do |chatroom| %>
+            <li><%= link_to chatroom.name, "#" %></li>
+          <% end %>
+        </ul>
+    <% end %>
+
+
+		<p id="notice"><%= notice %></p>
+		
+		<div id="chat-heading">
+			<h2>Chatrooms</h2>
+		</div>
+
+		<p>
+		  <strong>Name:</strong>
+		  <%= @chatroom.name %>
+		</p>
+
+		<%= link_to 'Edit', edit_chatroom_path(@chatroom) %> |
+		<%= link_to 'Back', chatrooms_path %>
+	</div>
+</div>
