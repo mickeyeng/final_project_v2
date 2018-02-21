@@ -3,14 +3,15 @@
 	<div class="sidebar"> 
 
 		<% if user_signed_in? %>
-        <h5> Current Chatrooms</h5>
+        <h5><%= current_user.username %>'s Current Chatrooms</h5>
         <ul>
           <% current_user.chatrooms.each do |chatroom| %>
-            <li><%= link_to chatroom.name, "#" %></li>
+            <li><%= link_to chatroom.name, chatroom %></li>
           <% end %>
         </ul>
     <% end %>
-
+	
+	<hr>
 
 		<p id="notice"><%= notice %></p>
 		
@@ -25,5 +26,8 @@
 
 		<%= link_to 'Edit', edit_chatroom_path(@chatroom) %> |
 		<%= link_to 'Back', chatrooms_path %>
+	</div>
+
+	<div class="message-box">
 	</div>
 </div>
