@@ -1,0 +1,18 @@
+.sidebar {
+	
+}
+
+#chat-area {
+  display: grid;
+  grid-column: 5 / 12;
+  border: 1px solid black;
+  grid-auto-rows: auto;
+  padding: 10px;
+
+}
+
+.chat-textarea {
+	display: grid;
+	border: 1px solid black;
+	grid-column: 5 / 12;
+}

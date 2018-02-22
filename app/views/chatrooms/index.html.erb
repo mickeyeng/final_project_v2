@@ -15,11 +15,11 @@
 <% @chatrooms.each do |chatroom| %>
     <div id="sidebar-new-chat-grid">
       <i id="hashtag" class="fab fa-slack-hash fa-lg"></i>
-      <p><%= link_to chatroom.name + "",  chatroom, id: "channel-name" %></p>
+      <p><%= link_to chatroom.name,  chatroom, id: "channel-name" %></p>
       <%= link_to 'Edit', edit_chatroom_path(chatroom), class: "btn btn-secondary", id: "edit" %>
-      <%= link_to 'Destroy', chatroom, method: :delete, class: "btn btn-secondary", data: { confirm: 'Are you sure?' } %>
-      <%= link_to "Join", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", method: :post %>
-      <%= link_to "Leave", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", method: :delete %>
+      <%= link_to 'Destroy', chatroom, method: :delete, class: "btn btn-secondary", id: "delete", data: { confirm: 'Are you sure?' } %>
+      <%= link_to "Join", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "join", method: :post %>
+      <%= link_to "Leave", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "join", method: :delete %>
       <br>
     </div>
 <% end %>

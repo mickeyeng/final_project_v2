@@ -3,6 +3,7 @@
   	grid-template-columns: repeat(12, 1fr);
   	grid-template-rows: repeat(5, minmax(200px, auto));
 	grid-gap: 10px;
+	margin-top: 55px;
 				
 }
 
@@ -14,7 +15,8 @@
     grid-column: 1 / 5;
     grid-row: 1 / 10;
     color: white;
-
+    height: 100%;
+	
 
 
   #sidebar-heading {
@@ -68,21 +70,27 @@
 			  grid-column: 1!important;
 			  padding: 5px;
 			  align-self: start;
+			  background-color: transparent;
+    		  border: 0.5px solid;
 		}
 
 		#delete {
 			  margin: 0;
-			  grid-column: 3;
+			  // grid-column: 3;
 			  padding: 5px;
 			  align-self: start;
+			  background-color: transparent!important;
+    		  border: 0.5px solid;
 		}
 
 
 		#join {
 			  margin: 0;
-			  grid-column: 4!important;
+			  // grid-column: 4!important;
 			  padding: 5px;
 			  align-self: start;
+			  background-color: transparent!important;
+    		  border: 0.5px solid;
 		}
 
 		a {
