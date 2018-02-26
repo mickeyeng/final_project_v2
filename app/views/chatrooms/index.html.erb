@@ -1,51 +1,56 @@
-<div class="chatroom-grid">
-  <div class="sidebar">
+<div class="wrapper">
+   <p id="notice"><%= notice %></p>
+  
 
-    <div id="sidebar-heading">
-        <i class="fas fa-graduation-cap fa-2x"></i>
-        <strong><h3 id="heading">MyUel</h3></strong>
+    <div class="logo">
+        <%= image_tag("logo.png") %>
     </div>
 
-    <div id="channel-heading">
-        <i id="chat-logo" class="far fa-comment fa-2x d-none d-sm-block"></i>
-        <!-- <i id="chat-logo" class="far fa-comment fa-1x d-block d-sm-none"></i> -->
-        <p><strong>Channels</strong></p>
+    
+
+    <br>
+
+    <div class="content">
+
+    <div class="heading">
+        <p>Channels</p>
     </div>
+
+    <div class="one-grid">
+        <%= image_tag("chat-sm.png", id: "chat" ) %>
+    </div>  
+
+    <hr>
+
 
 <% @chatrooms.each do |chatroom| %>
-    <div id="sidebar-new-chat-grid">
-      <i id="hashtag" class="fab fa-slack-hash fa-lg"></i>
+    <div class="four-grid">
+      <!-- <i id="hashtag" class="fab fa-slack-hash fa-lg"></i> -->
       <p><%= link_to chatroom.name,  chatroom, id: "channel-name" %></p>
-      <%= link_to 'Edit', edit_chatroom_path(chatroom), class: "btn btn-secondary", id: "edit" %>
-      <%= link_to 'Destroy', chatroom, method: :delete, class: "btn btn-secondary", id: "delete", data: { confirm: 'Are you sure?' } %>
-      <%= link_to "Join", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "join", method: :post %>
-      <%= link_to "Leave", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "join", method: :delete %>
-      <br>
+      <%= link_to 'UPDATE', edit_chatroom_path(chatroom), class: "btn btn-secondary", id: "update" %>
+      <%= link_to 'REMOVE', chatroom, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-secondary", id: "remove" %>
+      <%= link_to "JOIN", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "join", method: :post %>
+      <%= link_to "LEAVE", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "leave", method: :delete %>
     </div>
+    <hr>
 <% end %>
 
-
-            <!-- <button id="edit" type="button" class="btn btn- btn-sm">Update</button>
-            <button id="delete" type="button" class="btn btn- btn-sm">Remove</button>
-            <button id="join" type="button" class="btn btn- btn-sm">Join</button>
- -->
-
-
-
-
-
-
   
-  <p id="notice"><%= notice %></p>
+
+
+
 
   
   <br>
 
 
-    <div class="btn btn-secondary new-channel">
-      <%= link_to 'Add Channel', new_chatroom_path %>
-      <i id="plus" class="fas fa-plus"></i>
+    
+
+    <div class="add-channel">
+      <%= link_to 'Add Channel + ', new_chatroom_path, id: "add" %>
     </div>
 
   </div>
+  <!-- content div -->
+
 </div>

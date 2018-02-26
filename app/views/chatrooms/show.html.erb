@@ -1,15 +1,22 @@
 
-<div class="chatroom-grid">
-	<div class="sidebar"> 
+<div class="chat-wrapper">
+	<div class="sidebar">
+
+		<div class="sidebar-grid">
+		    <%= image_tag("logo.png", id: "logo") %>
+		</div> 
 
 		<% if user_signed_in? %>
-        <h5><%= current_user.username %>'s Current Chatrooms</h5>
-        <ul>
-          <% current_user.chatrooms.each do |chatroom| %>
-            <li><%= link_to chatroom.name, chatroom %></li>
-          <% end %>
-        </ul>
-    <% end %>
+			<div class="sidebar-grid">
+	        	<h3 id="channel-heading"><%= current_user.username %>'s Current Chatrooms</h5>
+	    	</div>
+        	<hr>
+	        <ul class="current-chatrooms">
+	          <% current_user.chatrooms.each do |chatroom| %>
+	            <li><%= link_to chatroom.name, chatroom %></li>
+	          <% end %>
+	        </ul>
+    	<% end %>
 	
 	<hr>
 
@@ -24,28 +31,43 @@
 		  <%= @chatroom.name %>
 		</p>
 
-		<%= link_to 'Edit', edit_chatroom_path(@chatroom) %> |
-		<%= link_to 'Back', chatrooms_path %>
-	</div>
+		<%= link_to 'Edit', edit_chatroom_path(@chatroom), class: "chat-btn" %> |
+		<%= link_to 'Back', chatrooms_path, class: "chat-btn" %>
 
-	<div id="chat-area">
-		<h3>general</h3>
+
+	</div> <!-- end of sidebar -->
+
+
+
+
+
+	<div class="chat-section">
+		<strong><%= @chatroom.name  %></strong>
+		<hr>
 		<div data-behavior='messages' data-chatroom-id='<%= @chatroom.id  %>'>
 			<% @chatroom.messages.order(created_at: :desc).limit(100).reverse.each do |message| %>
-				<!-- <div class="jumbotron"> -->
 					<%= render message  %>
-				<!-- </div> -->
+			<% end %>
+		</div>
+		<br>
+		<div class="text-area">
+			<div id="text-box">
+			<%= form_for [@chatroom, Message.new], remote: true do |f| %>
+					<%= f.text_area :body, rows: 1, class: "form-control", autofocus: true, id: "text-box"  %>
+			</div>
+
+					
+					<%= f.submit "Send", class: "btn btn-primary send-btn"  %>
 			<% end %>
 		</div>
 	</div>
 
 
-	<div class="chat-textarea">
-		<%= form_for [@chatroom, Message.new], remote: true do |f| %>
-		<%= f.text_area :body, rows: 1, class: "form-control", autofocus: true  %>
-		<%= f.submit "Send"  %>
-	<% end  %>
-	</div>
+	
+
+
+
 </div>
+<!-- end of wrapper -->
 
 

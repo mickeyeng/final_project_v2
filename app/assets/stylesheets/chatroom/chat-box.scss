@@ -1,18 +1,145 @@
-.sidebar {
-	
-}
 
-#chat-area {
-  display: grid;
-  grid-column: 5 / 12;
-  border: 1px solid black;
-  grid-auto-rows: auto;
-  padding: 10px;
-
-}
-
-.chat-textarea {
+.chat-wrapper {
 	display: grid;
-	border: 1px solid black;
-	grid-column: 5 / 12;
+	padding-top: 2%;
+	grid-template-columns: repeat(6, 1fr);
+	grid-auto-rows: minmax(20px, auto);
+	grid-template-areas:
+	"sidebar sidebar chat chat chat chat";
+
+	hr {
+  		background: white;
+	}
+	
+
+	/*
+	sidebar */
+	.sidebar {
+		grid-area: sidebar;
+		background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+		padding: 20px;
+		min-height: 100vh;
+		/* position: fixed; */
+
+		#logo {
+		  width: 75%;
+		  justify-self: center;
+		}
+
+
+		.sidebar-grid {
+			  display: grid;
+			  grid-template-columns: repeat(1, auto);
+		}
+
+		#sidebar-heading {
+		  grid-column: 2;
+		  color: white;
+		}
+
+
+		#channel-heading {
+			  padding-top: 50px;
+			  color: white;
+			  grid-column: 1;
+			  font-weight: 700;
+		}
+
+		.current-chatrooms a  {
+			 list-style-type: none;
+			 color: white;
+			 font-weight: 600;
+		}
+
+		.chat-btn {
+		  padding: 10px;
+		  background-color: white;
+		  font-size: 20px;
+		  text-transform: uppercase;
+		}
+
+
 }
+
+		/* chat area */
+		.chat-section {
+		  grid-area: chat;
+		  padding: 20px;
+		  overflow: scroll;
+		  padding-top: 8%;
+		}
+
+
+		.message {
+		  padding-bottom: 15px;
+		}
+
+		.message-box {
+		  padding: 10px;
+		  background-color: #e9ecef;
+		  // box-shadow: 2px 14px 5px 0px rgba(154, 140, 140);
+
+
+		}
+
+		.message-box p {
+		  color: black;
+
+		}
+
+
+		.text-area {
+		  padding: 15px;
+		  /* background-color: #e9ecef; */
+		}
+
+		.text-area p  {
+			width: 100%;	
+		  	color: black;
+		}
+
+		.send-btn {
+		  width: 100%;	
+		  margin-top: 10px;
+		  padding: 10px;
+		  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+		  text-align: center;
+		}
+
+		#text-box {
+			width: 100%;
+		}
+		/* chat area */
+
+
+
+}
+
+
+
+
+		@media (max-width: 599px) {
+		  .chat-wrapper {
+		    display: grid;
+		    grid-template-columns: repeat(6, 1fr);
+		    grid-auto-rows: minmax(20px, auto);
+		    grid-template-areas:
+		    "navbar navbar navbar navbar navbar navbar"
+		    "sidebar sidebar sidebar sidebar sidebar sidebar "
+		    "chat chat chat chat chat chat";
+		  }
+
+		}
+
+		@media (min-width: 600px) {
+
+		}
+
+		@media (min-width: 900px) {
+
+		}
+
+		 @media (min-width: 1200px) {
+
+		 }
+
