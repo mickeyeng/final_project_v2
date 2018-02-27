@@ -2,18 +2,21 @@ $(document).on "turbolinks:load", ->
 	$("#new_message").on "keypress", (e) ->
     if e && e.keyCode == 13
       e.preventDefault()
-      $(this).submit()
-
-
-
-$(document).on 'turbolinks:load', ->
-  submit_message()
-
-submit_message = () ->
-  $('#new_message').on 'keydown', (event) ->
-    if event.keyCode is 13
+      console.log "test"
       $('input').click()
-      event.target.value = ""
-      event.preventDefault()
+
+  $("#new_message").on "submit", (e) ->
+    e.preventDefault()
+
+    chatroom_id = $("[data-behavior='messages']").data("chatroom_id")
+    body        = $("#message_body")
+    console.log "submitted form"
+
+    App.chatrooms.send_message(chatroom_id, body.val())
+
+    body.val("")
+     
+
+
 
 

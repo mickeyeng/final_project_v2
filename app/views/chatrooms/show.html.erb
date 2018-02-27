@@ -13,7 +13,7 @@
         	<hr>
 	        <ul class="current-chatrooms">
 	          <% current_user.chatrooms.each do |chatroom| %>
-	             <li><%= link_to chatroom.name, chatroom, data: {behavior: "chatroom-link", chatroom_id: chatroom.id} %></li>
+	            <li><%= link_to chatroom.name, chatroom, data: {behavior: "chatroom-link", chatroom_id: chatroom.id} %></li>
 	          <% end %>
 	        </ul>
     	<% end %>

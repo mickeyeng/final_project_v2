@@ -12,3 +12,10 @@
 	  	active_chatroom.append(data.message)
 	  else
 	  	$("[data-behavior='chatroom-link'][data-chatroom-id='#{data.chatroom_id}']").append("<p id='unread-message'>Unread message</p>");
+
+
+  send_message: (chatroom_id, message) ->
+  	@perform "send_message", {chatroom_id: chatroom_id, message: message}
+  	# sends the json object over the server
+
+	  	
