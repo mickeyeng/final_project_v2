@@ -24,6 +24,7 @@
 		#logo {
 		  width: 75%;
 		  justify-self: center;
+		  padding-top: 20px;
 		}
 
 
@@ -110,6 +111,14 @@
 			width: 100%;
 		}
 		/* chat area */
+
+		#unread-message {
+			padding: 10px;
+			background-color: green;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 8px;
+		}
 
 
 

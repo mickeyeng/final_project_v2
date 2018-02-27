@@ -1,5 +1,15 @@
 <h1>New Chatroom</h1>
 
+<div class="wrapper">
+
+	<div class="logo">
+       <%= image_tag("logo/Logo-good-small.png") %>
+    </div>
+
+	<div class="content">
+
 <%= render 'form', chatroom: @chatroom %>
 
 <%= link_to 'Back', chatrooms_path %>
+	</div>
+</div>

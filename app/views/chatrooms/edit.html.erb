@@ -1,6 +1,18 @@
 <h1>Editing Chatroom</h1>
 
-<%= render 'form', chatroom: @chatroom %>
 
-<%= link_to 'Show', @chatroom %> |
-<%= link_to 'Back', chatrooms_path %>
+<div class="wrapper">
+
+	<div class="logo">
+       <%= image_tag("logo/Logo-good-small.png") %>
+    </div>
+
+	<div class="content">
+		<div id="form">
+			<%= render 'form', chatroom: @chatroom %>
+
+			<%= link_to 'Show', @chatroom, id: "edit" %> |
+			<%= link_to 'Back', chatrooms_path, id: "edit" %>
+		</div>
+	</div>
+</div>

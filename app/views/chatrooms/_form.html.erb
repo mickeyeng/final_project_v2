@@ -11,10 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :chatroom_name %>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <%= form.label :name, class: "input-group-text", id:"inputGroup-sizing-default" %>
+      <%= form.text_field :name, id: :chatroom_name, class:"form-control" %>
+    </div>
   </div>
+
+
+
+
+
 
   <div class="actions">
     <%= form.submit %>

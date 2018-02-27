@@ -5,7 +5,7 @@ body.sessions {
 
 
 
-#login-grid {
+.login-grid {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	grid-auto-rows: minmax(100px, auto );
@@ -17,7 +17,7 @@ body.sessions {
 
 
 
-#login-box {
+.login-box {
 	border: 0px;
 	padding: 20px;
 	grid-column: 3 / 5;
