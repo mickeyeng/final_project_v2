@@ -18,8 +18,7 @@ $(document).on "turbolinks:load", ->
       event.preventDefault()
 
 
-  $("#new_message").on "submit", (e) ->
-    e.preventDefault()
+  
 
     chatroom_id = $("[data-behavior='messages']").data("chatroom_id")
     body        = $("#message_body")
@@ -29,4 +28,7 @@ $(document).on "turbolinks:load", ->
 
     body.val("")
      
+
+
+
 
