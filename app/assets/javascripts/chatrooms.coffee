@@ -1,9 +1,22 @@
+
+handleVisiblityChange = ->
+    $strike = $(".strike")
+    if $strike.length > 0
+      chatroom_id = $("[data-behavior='messages']").data("chatroom-id")
+      App.last_read.update(chatroom_id)
+      $strike.remove()
+
+
 $(document).on "turbolinks:load", ->
-	$("#new_message").on "keypress", (e) ->
-    if e && e.keyCode == 13
-      e.preventDefault()
-      console.log "test"
+  $(document).on "click", handleVisiblityChange
+ 
+  submit_message = () ->
+  $('#new_message').on 'keydown', (event) ->
+    if event.keyCode is 13
       $('input').click()
+      event.target.value = ""
+      event.preventDefault()
+
 
   $("#new_message").on "submit", (e) ->
     e.preventDefault()
@@ -16,7 +29,4 @@ $(document).on "turbolinks:load", ->
 
     body.val("")
      
-
-
-
 
