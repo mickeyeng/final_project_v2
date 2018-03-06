@@ -35,6 +35,19 @@
 		<%= link_to 'Back', chatrooms_path, class: "chat-btn" %>
 
 
+
+	<!-- User list section
+ -->
+	<br>
+
+	<hr>
+	 <ul class="current-chatrooms">
+	  <% (User.all -  [current_user]).each do |user| %>
+	    <li><%= link_to user.username, "#", data: {behavior: "chatroom-link", chatroom_id: "#"} %></li>
+	  <% end %>
+	</ul>
+
+
 	</div> <!-- end of sidebar -->
 
 
@@ -49,14 +62,17 @@
 
 
 			<% @messages.each do |message| %>
-				<% if !unread_messages && @chatroom_user.last_read_at < message.created_at %>
-					<% unread_messages = true %>
-					<div class="strike"><span>Unread Messages</span></div>
-				<% end %>
+    			<% if !unread_messages && @chatroom_user.last_read_at.present? && @chatroom_user.last_read_at < message.created_at %>
+      				<% unread_messages = true %>
+     				 <div class="strike"><span>Unread Messages</span></div>
+   				 <% end %>
 					<%= render message  %>
 			<% end %>
 
 			
+
+
+
 		</div>
 		<br>
 		<div class="text-area">
@@ -70,6 +86,8 @@
 			<% end %>
 		</div>
 	</div>
+	
+
 
 
 	
