@@ -37,8 +37,7 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
   config.action_cable.url = 'wss://myuel-v2.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = [ 'https://myuel-v2.herokuapp.com/', 'http://myuel-v2.herokuapp.com' ]
-
+config.action_cable.allowed_request_origins = [/http:\/\/www\.myuel-v2.herokuapp\.com/, /https:\/\/www\.myuel-v2.herokuapp\.com/]
 
 
 
