@@ -4,12 +4,12 @@ class ChatroomsController < ApplicationController
   # GET /chatrooms
   # GET /chatrooms.json
   def index
-    @chatrooms = Chatroom.all
+    @chatrooms = Chatroom.public_channels
   end
 
   # GET /chatrooms/1
   # GET /chatrooms/1.json
- def show
+  def show
     @messages = @chatroom.messages.order(created_at: :desc).limit(100).reverse
     @chatroom_user = current_user.chatroom_users.find_by(chatroom_id: @chatroom.id)
   end
@@ -29,6 +29,7 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.new(chatroom_params)
 
     respond_to do |format|
+
       if @chatroom.save
         @chatroom.chatroom_users.where(user_id: current_user.id).first_or_create
         format.html { redirect_to @chatroom, notice: 'Chatroom was successfully created.' }

@@ -8,4 +8,4 @@ class MessageRelayJob < ApplicationJob
       chatroom_id: message.chatroom.id
     }
   end
-end  
+end

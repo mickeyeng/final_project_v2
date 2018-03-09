@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '6f71e3d28f3c7bee1ff9bda1cdb4e43e28ead3d55c8eafdfe002229c4f9ad80cd4f5381fbc543a41666af2eec58726d4e002a4555964dd932474f8c327620bda'
+  # config.secret_key = 'c1b7d4557968997b1fec1abe80b61fff9c803fc65bdce1476ebf408eeb1fa93721e1ff96c5d0986a7e31741fd4da64f8095df3a034c392131b799685bd98f04e'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -90,12 +90,6 @@ Devise.setup do |config|
   # from the server. You can disable this option at your own risk.
   # config.clean_up_csrf_token_on_authentication = true
 
-  # When false, Devise will not attempt to reload routes on eager load.
-  # This can reduce the time taken to boot the app but if your application
-  # requires the Devise mappings to be loaded during boot time the application
-  # won't boot properly.
-  # config.reload_routes = true
-
   # ==> Configuration for :database_authenticatable
   # For bcrypt, this is the cost for hashing the password and defaults to 11. If
   # using other algorithms, it sets how many times you want the password to be hashed.
@@ -108,12 +102,9 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '8f20967fc71250a3e07fb2698afb48fabe0736c63fa5fddf5f2a3f4f7f717c7704110c4a39068abeb065d4f507a42da2fc1f97c4a2e6fe964029103f122302c2'
+  # config.pepper = 'be29bbe59df82d82a54647538da1c55fd71ec1eef717594dbbf4032b3c011d2aad09f88e0c680fea7163991fb5197554f057785d190b83817ec5e2a6d03d5e95'
 
-  # Send a notification to the original email when the user's email is changed.
-  # config.send_email_changed_notification = false
-
-  # Send a notification email when the user's password is changed.
+  # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
 
   # ==> Configuration for :confirmable

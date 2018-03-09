@@ -12,8 +12,6 @@ class ChatroomUsersController < ApplicationController
     redirect_to chatrooms_path
   end
 
-  
-
   private
 
     def set_chatroom
