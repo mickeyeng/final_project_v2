@@ -36,8 +36,11 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
-  config.action_cable.url = 'wss://myuel-v2.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = [ 'https://myuel-v2.herokuapp.com/', /http:\/\/example.*/ ]
+  config.action_cable.url = 'ws://myuel-v2.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = [ 'http://myuel-v2.herokuapp.com/', /http:\/\/example.*/ ]
+
+
+
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
