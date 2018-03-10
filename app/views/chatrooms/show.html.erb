@@ -43,7 +43,7 @@
 	<hr>
 	 <ul class="current-chatrooms">
 	  <% (User.all -  [current_user]).each do |user| %>
-	    <li><%= link_to user.username, direct_message_path(user.id), data: {behavior: "chatroom-link", chatroom_id: Chatroom.direct_message_for_users([current_user, user]).id } %></li>
+	    <li><%= link_to user.username, direct_message_path(user.id), :method => :get, data: {behavior: "chatroom-link", chatroom_id: Chatroom.direct_message_for_users([current_user, user]).id } %></li>
 	  <% end %>
 	</ul>
 
