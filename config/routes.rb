@@ -1,17 +1,43 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  get  'pages/index'
+  get  'chatrooms/index'
+  
+
+   
+
+
+  # get 'chatrooms/index', :to => "chatrooms/index", :as => chatroom_index
+
+
   # changes login to /login
 	devise_scope :user do
 		get 'login', to: 'devise/sessions#new'
 	end	
 
+	
+
+	devise_scope :user do
+		get 'sign_up', to: 'devise/registrations#new'
+	end	
+
+	devise_scope :user do
+		get 'sign_up', to: 'devise/registrations#new'
+	end	
+
 	resources :chatrooms do
 		resource :chatroom_users
 	    resources :messages
-	 end
+	end
+
+	
+
+	# namespace :admin do
+ #  		resources :chatromms, :pages
+	# end
 
   resources :direct_messages
 
-  root to: "chatrooms#index"
+  root to: "pages#index"
 end

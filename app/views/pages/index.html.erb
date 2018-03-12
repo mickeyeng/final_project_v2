@@ -1,0 +1,65 @@
+<div id="wrapper">
+  
+  <div id="top-content">
+    
+
+        <section id="welcome">
+          <%= image_tag("logo/Logo-good", id: "logo-heading", width: 350 ) %>
+
+          <h2 id="welcome-heading">Weclome to myuel <%= current_user.username  %></h2>
+          <h3 id="welcome-sub-heading">Your number one place for social life at university </h3>
+
+
+
+
+
+          <!-- <div id="profile-pic">
+            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
+          </div>
+
+          <div id="study-picture">
+            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
+          </div> -->
+        </section>
+
+  </div> <!-- end of top-content -->
+
+  <div id="main-content">
+      <section id="boxes">
+        
+        <%= link_to edit_user_registration_path do %>
+            <div id="box1">
+                <%= image_tag("boxes/profile.png", class: "box-image") %>
+                <h1 class="box-text">Profile</h1>
+            </div>
+        <% end %>
+
+        <div id="box2">
+          <%= image_tag("boxes/events.png", class: "box-image") %>
+          <h1 class="box-text">Events</h1>
+        </div>
+        
+
+         <%= link_to chatrooms_path do %>
+        <div id="box3">
+
+           <%= image_tag("boxes/chat.png", class: "box-image") %>
+
+         <h1 class="box-text">Chat</h1>
+
+        </div>
+        <% end %>
+
+      
+
+      </section>
+  </div>
+
+
+
+
+
+
+
+
+</div> <!-- wrapper -->
