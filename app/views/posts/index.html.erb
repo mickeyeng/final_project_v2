@@ -8,6 +8,7 @@
 			<p><%= link_to post.title, post  %></p>
 			<hr>
 			<p><%= post.content %></p>
+			<p>Created by <%= current_user.username %></p>
 		</div>
 		<br>
 		<% end %>
