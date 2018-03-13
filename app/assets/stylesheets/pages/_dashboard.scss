@@ -10,7 +10,7 @@ body.index {
 
 	#wrapper {
 	  display: grid;
-	  grid-template-columns: repeat(4, 1fr);
+	  grid-template-columns: repeat(1, 1fr);
 	  grid-auto-rows: 200px;
 	  grid-template-areas:
 	  "top top top top"
@@ -31,7 +31,7 @@ body.index {
 			  grid-template-columns: repeat(1, 1fr);
 			  display: grid;
 			  grid-gap: 10px;
-			  margin: 20px;
+			  margin: 0px;
 			  padding: 20px;
 			  // border: 1px solid white;
 		}
@@ -47,6 +47,7 @@ body.index {
 		  color: white;
 		  font-family: 'Open Sans', sans-serif;
 		  font-weight: 800;
+		  text-align: center;
 		}
 
 		#welcome-sub-heading {
@@ -55,6 +56,7 @@ body.index {
 		  font-family: 'Open Sans', sans-serif;
 		  /* font-weight: 800; */
 		  font-style: italic;
+		  text-align: center;
 		}
 
 
@@ -64,9 +66,7 @@ body.index {
 
 
 
-		#main-content {
-	  /* grid-row: 3; */
-	  /* background-color: red; */
+	#main-content {
 	  grid-area: main;
 	  margin: 100px;
 	}
@@ -84,7 +84,14 @@ body.index {
 	  display: grid;
 	  border: 10px solid white;
 	  height: 240px;
-	  background-color: white;
+	  background-color: #8BC6EC;
+	  background-image: -webkit-linear-gradient(top left, #8BC6EC 0%, #9599E2 100%);
+	  background-image: -o-linear-gradient(top left, #8BC6EC 0%, #9599E2 100%);
+	  background-image: linear-gradient(to bottom right, #8BC6EC 0%, #9599E2 100%);
+	
+	
+	
+	
 	  box-shadow: 0px 6px 10px 7px #ccc;
 	}
 
@@ -93,8 +100,11 @@ body.index {
 	  display: grid;
 	  border: 10px solid white;
 	  height: 240px;
-	  background-color: #ea7129;
-	  box-shadow: 0px 6px 10px 7px #ccc;
+	 background-color: #F4D03F;
+	 background-image: -webkit-linear-gradient(42deg, #F4D03F 0%, #16A085 100%);
+	 background-image: -o-linear-gradient(42deg, #F4D03F 0%, #16A085 100%);
+	 background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+	 box-shadow: 0px 6px 10px 7px #ccc;
 	}
 
 	#box3 {
@@ -102,7 +112,9 @@ body.index {
 	  display: grid;
 	  border: 10px solid white;
 	  height: 240px;
-	  background-color: green;
+	  background-color: #85FFBD;
+      background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
 	  box-shadow: 0px 6px 10px 7px #ccc;
 	  color: black;
 
@@ -171,3 +183,8 @@ body.index {
 
 
 }  /* end of index  */
+
+
+
+
+

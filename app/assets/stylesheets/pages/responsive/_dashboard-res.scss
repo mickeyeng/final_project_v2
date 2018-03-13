@@ -1,18 +1,40 @@
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
-body.index {
-  #boxes {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(1, 1fr);
-  }
+
+
+
+@media all and (max-width: 575px) { 
+
+
+  	#boxes {
+	  display: grid;
+	  grid-gap: 30px;
+	  grid-template-columns: repeat(1, 1fr)!important;
+	}
+
+
+	#logo-heading {
+		width: 300px;
+	}
 
 }
 
+@media all and (max-width: 768px) { 
 
-}
+ } 
 
 
+
+
+@media all and (max-width: 991px) { 
+
+
+ } 
+
+
+@media all and (max-width: 1199px) { 
+
+
+
+ } 
 

@@ -55,6 +55,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'sqlite3'
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'guard', '~> 2.14'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false 
 end
 
 group :production do
