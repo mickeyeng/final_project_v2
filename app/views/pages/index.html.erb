@@ -33,11 +33,14 @@
                 <h1 class="box-text">Profile</h1>
             </div>
         <% end %>
+        
 
+         <%= link_to posts_path do %>
         <div id="box2">
           <%= image_tag("boxes/events.png", class: "box-image") %>
           <h1 class="box-text">Events</h1>
         </div>
+        <% end %>
         
 
          <%= link_to chatrooms_path do %>

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get  'pages/index'
   get  'chatrooms/index'
-  
+
 
    
 
@@ -30,6 +30,11 @@ Rails.application.routes.draw do
 		resource :chatroom_users
 	    resources :messages
 	end
+
+
+	resources :posts
+
+
 
 	
 
