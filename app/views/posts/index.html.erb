@@ -1,1 +1,17 @@
-<h1>Posts index</h1>
+<div class="container">
+	<%= link_to 'New post', new_post_path, class: 'btn btn-danger'  %>
+	<br>
+	<br>
+	
+		<% @posts.each do |post| %>
+		<div class="card">
+			<p><%= link_to post.title, post  %></p>
+			<hr>
+			<p><%= post.content %></p>
+		</div>
+		<br>
+		<% end %>
+	
+</div>
+
+
