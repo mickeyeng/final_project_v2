@@ -1,7 +1,12 @@
 <div class="container">
+	<%= image_tag (@post.image.url(:medium)) %>
 	<h1><%= @post.title  %></h1>
 	<hr>
 	<br>
 	<p><%= @post.content  %></p>
+	<br>
+
+
+	<%= link_to 'Back', posts_path, class: 'btn btn-primary' %>
 
 </div>

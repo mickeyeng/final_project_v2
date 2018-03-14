@@ -30,6 +30,8 @@ gem 'redis'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem "paperclip", "~> 5.2.1"
+
 
 gem 'devise'
 gem 'bootstrap', '~> 4.0.0'
