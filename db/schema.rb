@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180314122843) do
+ActiveRecord::Schema.define(version: 20180314133830) do
 
   create_table "chatroom_users", force: :cascade do |t|
     t.integer "chatroom_id"
@@ -65,6 +65,10 @@ ActiveRecord::Schema.define(version: 20180314122843) do
     t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "profile_picture_file_name"
+    t.string "profile_picture_content_type"
+    t.integer "profile_picture_file_size"
+    t.datetime "profile_picture_updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

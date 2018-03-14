@@ -5,8 +5,9 @@
 
         <section id="welcome">
           <%= image_tag("logo/Logo-good.png", id: "logo-heading", width: 350 ) %>
+          <%= image_tag (current_user.profile_picture.url(:thumb)), id: "profile-picture" %>
 
-          <h2 id="welcome-heading">Weclome <%= current_user.username %> to myuel </h2>
+          <h2 id="welcome-heading">Welcome <%= current_user.username %> to myuel </h2>
           <h3 id="welcome-sub-heading">Your number one place for social life at university </h3>
 
 

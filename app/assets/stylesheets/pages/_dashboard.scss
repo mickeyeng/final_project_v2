@@ -16,6 +16,7 @@ body.index {
 	  "top top top top"
 	  "top top top top"
 	  "top top top top"
+	  "top top top top"
 	  "main main main main";
 
 
@@ -31,8 +32,9 @@ body.index {
 			  grid-template-columns: repeat(1, 1fr);
 			  display: grid;
 			  grid-gap: 10px;
-			  margin: 0px;
+			  margin: 40px;
 			  padding: 20px;
+			  border: 10px solid #F4EDED;
 			  // border: 1px solid white;
 		}
 
@@ -40,6 +42,10 @@ body.index {
 		  color: white;
 		  justify-self: center;
 
+		}
+
+		#profile-picture {
+			justify-self: center;
 		}
 
 		#welcome-heading {
