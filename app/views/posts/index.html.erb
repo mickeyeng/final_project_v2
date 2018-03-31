@@ -12,6 +12,12 @@
 			<hr>
 			<p><%= post.content %></p>
 			<p>Created by <%= current_user.username %></p>
+			<p>Created by <%= User.find(post.user_id).username %></p>
+
+
+			
+
+
 		</div>
 		<br>
 		<% end %>

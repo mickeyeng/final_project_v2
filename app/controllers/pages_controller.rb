@@ -9,6 +9,7 @@ end
 
 
 def users
+	@users = User.all
 end
 
 

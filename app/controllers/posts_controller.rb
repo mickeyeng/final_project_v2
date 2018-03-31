@@ -16,15 +16,23 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = current_user.posts.build(post_params)
+		# @post = current_user.posts.build(post_params)
 
-		if @post.save
-			redirect_to @post
-		else
-			render 'new'
-		end
+		# if @post.save
+		# 	redirect_to @post
+		# else
+		# 	render 'new'
+		# end
 
 
+		@post = Post.new(post_params)
+		@post.user_id = current_user.id # assign the post to the user who craeted it
+		
+			if (@post.save)
+				redirect_to @post
+			else
+			 	render 'new' 
+			end
 	end
 
 	def update
@@ -52,7 +60,7 @@ class PostsController < ApplicationController
 	private 
 
 	def post_params
-		params.require(:post).permit(:title, :content, :image)
+		params.require(:post).permit(:user_id, :title, :content, :image)
 	end
 
 end
