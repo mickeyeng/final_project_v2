@@ -10,12 +10,12 @@
 			<br>
 			<p><%= link_to post.title, post  %></p>
 			<hr>
-			<p><%= post.content %></p>
+			<p><%= post.content.html_safe %></p>
 			<p>Created by <%= current_user.username %></p>
 			<p>Created by <%= User.find(post.user_id).username %></p>
 
 
-			
+
 
 
 		</div>
