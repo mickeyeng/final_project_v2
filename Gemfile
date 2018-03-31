@@ -36,6 +36,7 @@ gem "paperclip", "~> 5.2.1"
 gem 'devise'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'ckeditor'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

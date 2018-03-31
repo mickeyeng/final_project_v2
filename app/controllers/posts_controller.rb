@@ -4,13 +4,15 @@ class PostsController < ApplicationController
 		@posts = Post.all.order('created_at DESC')
 	end 
 
+	# @post = Post.find(params[:id])
+	# 	@user = User.find(params[:id])
+
 	def show
 		@post = Post.find(params[:id])
 	end
 
 	def new
-		@post = current_user.posts.build
-
+		@post = Post.new
 	end
 
 	def create

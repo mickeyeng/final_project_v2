@@ -3,21 +3,90 @@
 
 
 
-@media all and (max-width: 575px) { 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+body.index {
+	#wrapper {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-areas: 
+		"top"
+	  	"top"
+	  	"top"
+	  	"main";
 
 
-  	#boxes {
-	  display: grid;
-	  grid-gap: 30px;
-	  grid-template-columns: repeat(1, 1fr)!important;
+
+		#top-content {
+
+
+		#welcome {
+			 grid-template-columns: repeat(1, 1fr);
+			 margin: 15px;
+			  grid-template-areas:
+			  "logo" 
+			  "heading"
+			  "subheading"
+			  "profile"
+			  "name"
+			  "study"
+			  ".";
+			}
+
+		}
+
+
+		#logo-heading {
+			width: 180px;
+		}
+
+		#welcome-heading {
+			font-size: 20px;
+		}
+
+		#welcome-sub-heading {
+			font-size: 18px;
+		}
+
+		#profile {
+			justify-self: center;
+			border-radius: 100px;
+		}
+
+		#name {
+			justify-self: center;
+		}
+
+		#study {
+			justify-self: center;
+		}
+
+	#main-content {
+
+		margin: 15px;
+
+			  #boxes {
+			    display: grid;
+			    grid-gap: 30px;
+			    grid-template-columns: repeat(1, 1fr);
+			  }
+
+		  #boxes {
+		    display: grid;
+		    grid-gap: 30px;
+		    grid-template-columns: repeat(1, 1fr);
+		    grid-template-areas:
+		    "box1"
+		    "box2"
+		    "box3";
+		  }
+
+		}
+
+	  }
+
 	}
-
-
-	#logo-heading {
-		width: 300px;
-	}
-
 }
+
 
 @media all and (max-width: 768px) { 
 
