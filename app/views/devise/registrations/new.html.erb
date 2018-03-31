@@ -12,9 +12,32 @@
         <%= devise_error_messages! %>
 
         <div class="form-group">
-          <%= f.label :username %><br />
+          <%= f.label :profile_picture%><br />
           <%= f.file_field :profile_picture, class: "form-control" %>
         </div>
+
+        <div class="form-group">
+          <%= f.label :first_name %><br />
+          <%= f.text_field :first_name, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :last_name %><br />
+          <%= f.text_field :last_name, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :Course %><br />
+          <%= f.text_field :course, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :degree_level %><br />
+          <%= f.text_field :degree_level, class: "form-control" %>
+        </div>
+
+
+
 
         <div class="form-group">
           <%= f.label :username %><br />

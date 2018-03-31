@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   get  'pages/index'
+  get  'pages/users'
   get  'chatrooms/index'
 
 
@@ -23,9 +24,6 @@ Rails.application.routes.draw do
 		get 'sign_up', to: 'devise/registrations#new'
 	end	
 
-	devise_scope :user do
-		get 'sign_up', to: 'devise/registrations#new'
-	end	
 
 	resources :chatrooms do
 		resource :chatroom_users

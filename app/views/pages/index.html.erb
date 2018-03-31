@@ -6,8 +6,8 @@
         <section id="welcome">
 
           <%= image_tag (current_user.profile_picture.url(:thumb)), id: "profile" %>
-          <p id="name">Mickey English</p>
-          <p id="study">Computer Science - Level 6</p>
+          <p id="name"><%= current_user.first_name%> <%= current_user.last_name  %></p>
+          <p id="study"><%= current_user.course  %> - Level <%= current_user.degree_level  %></p>
 
 
           <%= image_tag("logo/Logo-good.png", id: "logo-heading", width: 350 ) %>
@@ -62,11 +62,22 @@
         </div>
         <% end %>
 
+
+
+        <%= link_to pages_users_path do %>
+        <div id="box4">
+
+           <%= image_tag("boxes/chat.png", class: "box-image") %>
+
+         <h1 class="box-text">Users</h1>
+
+        </div>
+        <% end %>
+
       
 
       </section>
   </div>
-
 
 
 

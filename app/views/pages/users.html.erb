@@ -1,0 +1,9 @@
+<h1>All users</h1>
+
+
+<% @users = User.all %>
+<% @users.each do |user| %>
+  <%= user.email %><br/>
+  <%= image_tag (user.profile_picture.url(:thumb)), id: "profile" %>
+  <h1><%= user.first_name  %></h1>
+<% end %>
