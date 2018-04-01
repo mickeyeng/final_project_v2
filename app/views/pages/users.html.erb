@@ -1,10 +1,78 @@
-<h1>All users</h1>
 
 
+<!--
 <% @users = User.all %>
 <% @users.each do |user| %>
   <%= user.email %><br/>
   <%= image_tag (user.profile_picture.url(:thumb)), id: "profile" %>
   <h1><%= user.first_name  %></h1>
 <% end %>
+-->
+
+<!-- <div id="users-wrapper">
+	<div class="container">
+		<table class="table table-hover table-dark">
+			<% @users.each do |user| %>
+		  <thead>
+		    <tr>
+		      <th scope="col">Profile</th>
+		      <th scope="col">First</th>
+		      <th scope="col">Last</th>
+		      <th scope="col">Study</th>
+		      <th scope="col">Year</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		    <% if user.profile_picture_file_name.blank? %>	
+		    	<td><%= image_tag 'empty-profile', id: "profile", width: "60" %></td>
+	      	<% else %>
+		      	<td><%= image_tag (user.profile_picture.url(:thumb)), id: "profile", width: "60" %></td>
+	      	<% end %>
+		      <td><%= user.first_name %></td>
+		      <td><%= user.last_name %></td>
+		      <td><%= user.course %></td>
+		      <td><%= user.degree_level %></td>
+		      
+		    </tr>
+		  </tbody>
+		  <% end %>
+		</table>
+	</div>
+</div> -->
+
+
+<div id="users-wrapper">
+
+	<div id="users-box" style="overflow-y:auto;">
+		<table class="table table-hover table-light">
+			<% @users.each do |user| %>
+		  <thead id="table-header">
+		    <tr>
+		      <th scope="col">Profile</th>
+		      <th scope="col">First Name</th>
+		      <th scope="col">Last Name</th>
+		      <th scope="col">Study</th>
+		      <th scope="col">Year</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		    <% if user.profile_picture_file_name.blank? %>	
+		    	<td><%= image_tag 'empty-profile', id: "profile", width: "60" %></td>
+	      	<% else %>
+		      	<td><%= image_tag (user.profile_picture.url(:thumb)), id: "profile", width: "60" %></td>
+	      	<% end %>
+		      <td><%= user.first_name %></td>
+		      <td><%= user.last_name %></td>
+		      <td><%= user.course %></td>
+		      <td><%= user.degree_level %></td>
+		      
+		    </tr>
+		  </tbody>
+		  <% end %>
+		</table>
+	</div>
+
+</div>
 

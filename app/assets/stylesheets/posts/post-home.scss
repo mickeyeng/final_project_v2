@@ -1,3 +1,177 @@
-index.posts {
+body.posts.index {
 	background-color: white;
+	transition: 0.25s all ease;
+
+
+	.bg-light {
+		background-color: #0093E9;
+	    background-image: -webkit-linear-gradient(70deg, #216c98 30%, #80D0C7 100%);
+	    background-image: -o-linear-gradient(70deg, #216c98 30%, #80D0C7 100%);
+	    background-image: linear-gradient(160deg, #216c98 30%, #80D0C7 100%);
+	}
+
+	
+	#posts-home-wrapper {
+
+
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		// border: 1px solid black;
+		grid-auto-rows: auto;
+		grid-gap: 15px;
+		margin: 60px;
+		grid-template-areas: 
+			"new-post header header dashboard"
+			"post post post post";
+
+
+
+		#add-post-button{
+		    width: 50%;
+		    padding: 20px;
+		    background-color: #009688;
+		    border: none;
+		    border-radius: 0px;
+		}	
+
+		#back-to-dash{
+		    width: 50%;
+		    padding: 20px;
+		    background-color: red;
+		    border: none;
+		    border-radius: 0px;
+
+		}	
+		
+
+		#header {
+			grid-area: header;
+			// border: 1px solid black;
+			justify-self: center;
+			font-weight: 600;
+			text-align: center;
+
+			.hr-custom {
+				border: 3px solid #3c86a5;
+    			width: 30%;
+
+			}
+
+
+			#main-heading {
+				font-size: 2.5rem;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 700;
+
+			}
+
+			#new-post-btn {
+				grid-area: new-post;
+
+
+				#button {
+					width: 100%;
+				    padding: 14px;
+				    border-radius: 0px;
+				}
+			}
+
+			#dashboard-btn {
+				grid-area: dashboard;
+				justify-self: end;
+			}
+		}
+
+
+
+
+		#posts-section {
+			grid-area: post;
+			// border: 1px solid black;
+
+
+			#boxes {
+				display: grid;
+				grid-gap: 20px;
+				grid-template-columns: repeat(3, 1fr);
+				// border: 1px solid green;
+				grid-auto-rows: auto;
+
+
+				 .card {
+				    	box-shadow: 0px 5px 20px #9e9e9ec2;
+				    	padding-bottom: 5px;
+
+				    	&:hover {
+				    		opacity: 0.8;
+				    	}
+
+
+				    	.card-content {
+				    		margin: 2%;
+				    	}
+				  }
+
+
+				div  {
+					// border: 1px solid red;
+					color: #4f5256;
+				    font-weight: 400;
+				    line-height: 1.618;
+				    -webkit-font-smoothing: antialiased;
+
+
+				   
+					
+
+
+					.post-heading a {
+						padding: 5px;
+						color: #30353a;
+    					text-decoration: none;
+    					margin-top: 3%;
+    					font-weight: 700;
+					}
+
+					.card-hr {
+						color: #3c85a5;
+						border: 0.8px solid;
+					}
+
+					.post-text {
+
+					}
+
+					.post-creator {
+						color: black;
+						font-weight: 600;
+					}
+
+
+					.read-post-btn {
+						width: 40%;
+						border: none;
+						border-radius: 0;
+						padding: 10px;
+						background-color: #3c85a5c4;
+
+					}
+				}
+				
+			}
+
+
+
+
+
+
+
+
+		}
+
+	}
+
+
+
+
 }

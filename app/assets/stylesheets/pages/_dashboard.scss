@@ -1,6 +1,9 @@
-body.index {
+$main-background-color: linear-gradient(160deg, #216c98 30%, #80D0C7 100%);
+
+
+body.pages.index {
   background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 30%, #80D0C7 100%);
+  background-image: $main-background-color; 
   height: 100%;
 
 
@@ -121,7 +124,6 @@ body.index {
 	  background-image: -o-linear-gradient(top left, #8BC6EC 0%, #9599E2 100%);
 	  background-image: linear-gradient(to bottom right, #8BC6EC 0%, #9599E2 100%);
 	  grid-area: box1;
-	  box-shadow: 0px 6px 10px 7px #ccc;
 
 	}
 
@@ -134,7 +136,6 @@ body.index {
 	 background-image: -webkit-linear-gradient(42deg, #F4D03F 0%, #16A085 100%);
 	 background-image: -o-linear-gradient(42deg, #F4D03F 0%, #16A085 100%);
 	 background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
-	 box-shadow: 0px 6px 10px 7px #ccc;
 	 grid-area: box2;
 	}
 
@@ -146,7 +147,7 @@ body.index {
 	  background-color: #85FFBD;
       background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 
-	  box-shadow: 0px 6px 10px 7px #ccc;
+
 	  color: black;
 	  grid-area: box3;
 
@@ -178,7 +179,6 @@ body.index {
 	  border: 10px solid white;
 	  height: 240px;
 	  background-color: yellow;
-	  box-shadow: 0px 6px 10px 7px #ccc;
 	}
 
 	// #box5 {
