@@ -16,6 +16,7 @@
 //= require popper
 //= require_tree .
 //= require bootstrap-sprockets
+//= require local-time
 
 
  

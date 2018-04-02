@@ -1,1 +1,1 @@
-<div class="jumbotron"><strong><!--  <%= image_tag (current_user.profile_picture.url), id: 'message-profile-picture' %> --> - <%= message.user.username%> - </strong><%= message.body  %></div>
+<div class="jumbotron"><strong><!--  <%= image_tag (current_user.profile_picture.url), id: 'message-profile-picture' %> --><%= local_time(message.created_at) %> - <%= message.user.username%> - </strong><%= message.body  %></div>
