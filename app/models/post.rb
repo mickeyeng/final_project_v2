@@ -6,5 +6,6 @@ class Post < ApplicationRecord
 	# post can't get submitted without the user_id
 	validates :user_id, presence: true 
 	belongs_to :user
+	has_many :comments
 
 end

@@ -73,7 +73,7 @@ body.posts.show {
 		"header header header"
 		"image image image"
 		"content content content"
-		"button-section . . ";
+		"comments comments comments";
 
 
 
@@ -101,8 +101,13 @@ body.posts.show {
 		}
 
 		#show-update-button-section {
-			grid-area: button-section;
+			
 			margin: 20px;
+		}
+
+		#show-comments-section {
+			margin: 20px;
+			grid-area: comments;
 		}
 
 

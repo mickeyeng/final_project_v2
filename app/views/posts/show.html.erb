@@ -27,6 +27,18 @@
 		<br>
 		<p><%= @post.content.html_safe  %></p>
 	</div>
+
+
+	<div id="show-comments-section">
+		<h4><%= @post.comments.count %> Comments</h4>
+		<hr>
+		<%= render @post.comments   %>
+		<div class="comments-form">
+			<hr>
+			<h3>Leave a reply</h3>
+			<%= render 'comments/form'  %>
+		</div>
+	</div>
 	
 
 	
