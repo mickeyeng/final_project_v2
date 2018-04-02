@@ -1,0 +1,122 @@
+body.posts.show {
+
+	$main-background-color: linear-gradient(160deg, #216c98 30%, #80D0C7 100%);
+	background-color: EFF5F9;
+	transition: 0.25s all ease;
+	font-family: Poppins, Helvetica, Arial, sans-serif;
+	font-size: 19px;
+	line-height: 30px;
+	color: #54585d;
+
+
+	.bg-light {
+		background-color: #0093E9;
+	    background-image: -webkit-linear-gradient(70deg, #216c98 30%, #80D0C7 100%);
+	    background-image: -o-linear-gradient(70deg, #216c98 30%, #80D0C7 100%);
+	    background-image: linear-gradient(160deg, #216c98 30%, #80D0C7 100%);
+	}
+
+	.hr {
+		border: 1px solid #2d749c52;
+	}
+
+
+	#buttons-wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		margin: 80px;
+		grid-gap: 15px;
+
+
+		#show-back-button {
+			// width: 50%;
+		    padding: 20px;
+		    background-color: red;
+		    border: none;
+		    border-radius: 0px;
+
+		}
+
+		#show-edit-button {
+			// width: 50%;
+		    padding: 20px;
+		    background-color: blue;
+		    border: none;
+		    border-radius: 0px;
+
+		}
+
+
+		#show-delete-button {
+			// width: 50%;
+		    padding: 20px;
+		    background-color: green;
+		    border: none;
+		    border-radius: 0px;
+
+		}
+
+		
+	}
+
+
+
+	#post-show-wrapper {
+		background-color: white;
+		display: grid;
+		gri-template-coumns: repeat(3, 1fr);
+		margin: 80px;
+		grid-auto-rows: auto;
+		// border: 1px solid black;
+		box-shadow: 0px 5px 20px #9e9e9ec2;
+		grid-template-areas: 
+		"header header header"
+		"image image image"
+		"content content content"
+		"button-section . . ";
+
+
+
+		#show-header-section {
+			grid-area: header;
+			margin: 20px;
+
+			h1 {
+				font-family: Poppins, Helvetica, Arial, sans-serif;
+				font-weight: 600;
+				line-height: 46px;
+				color: #30353a;
+			}
+		}
+
+		#show-post-images-section {
+			grid-area: image;
+			margin: 20px;
+		}
+
+		#show-content-section {
+			grid-area: content;
+			margin: 20px;
+			font-size: 16px;
+		}
+
+		#show-update-button-section {
+			grid-area: button-section;
+			margin: 20px;
+		}
+
+
+
+		.main-image {
+			justify-self: center;
+		}
+
+
+		.header {
+			justify-self: center;
+
+		}
+	}
+
+
+}

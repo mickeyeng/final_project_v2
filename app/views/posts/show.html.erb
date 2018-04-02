@@ -1,16 +1,34 @@
-<div class="container">
-	<%= image_tag (@post.image.url(:large)) %>
-	<h1><%= @post.title  %></h1>
-	<hr>
-	<br>
-	<p><%= @post.content.html_safe  %></p>
-	<br>
+<div id="buttons-wrapper">
+	<div id="show-update-button-section">
+			<%= link_to 'Back', posts_path, class: 'btn btn-primary', id: 'show-back-button' %>
+			 <% if current_user == @post.user %>
+				<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-warning', id: 'show-edit-button' %>
+				<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', id: 'show-delete-button' %>
+			<% end %>
+	</div>
+</div>
+
+
+<div id="post-show-wrapper">
+
+	<div id="show-header-section">
+		<h1 class="header"><%= @post.title  %></h1>
+		<p class="post-creator"><i class="far fa-calendar-alt"></i> Created by <%= User.find(@post.user_id).username %> on <%= local_time(@post.created_at) %></p>
+		<hr class="hr">
+	</div>
+
+	<div id="show-post-images-section">
+		<%= image_tag @post.image.url, class: 'img-fluid main-image' %>
+		<hr>
+	</div>
+
+	<div id="show-content-section">
+		<h1><%= @post.title  %></h1>
+		<br>
+		<p><%= @post.content.html_safe  %></p>
+	</div>
+	
 
 	
-		<%= link_to 'Back', posts_path, class: 'btn btn-primary' %>
-		 <% if current_user == @post.user %>
-			<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-warning' %>
-			<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-		<% end %>
 
 </div>

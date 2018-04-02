@@ -19,10 +19,14 @@
   @import "pages/responsive/dashboard-res";
   @import "nav/nav";
   @import "posts/post-home";
+  @import "posts/post-show";
+  @import url('https://fonts.googleapis.com/css?family=Poppins:500,700');
 
 
  body {
  	background-attachment: fixed;
+ 	transition: 0.25s all ease;
+ 	
  }
  
 
