@@ -1,0 +1,30 @@
+.notification-success {
+	background-color: #23d160;
+	padding: 1rem 1.5rem;
+	text-align: center;
+	font-size: 1.5rem;
+	transition-duration: 2s;
+
+
+
+	.notice {
+		color: white;
+		font-size: 1.5rem;
+	}
+}
+
+
+.notification-danger {
+	background-color: #ff3860;
+	padding: 1rem 1.5rem;
+	text-align: center;
+	font-size: 1.5rem;
+	transition-duration: 2s;
+
+	.notice {
+		color: white;
+		font-size: 1.5rem;
+	}
+
+
+}

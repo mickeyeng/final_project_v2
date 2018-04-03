@@ -2,6 +2,8 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.all.order('created_at DESC')
+		@comments = Comment.all
+		@users = User.all
 	end 
 
 	# @post = Post.find(params[:id])
@@ -30,8 +32,10 @@ class PostsController < ApplicationController
 		
 			if (@post.save)
 				redirect_to @post
+				flash[:notice] = "Post was successfuly created"
 			else
 			 	render 'new' 
+			 	flash[:alert] = "Post was unsuccessfull, please try again."
 			end
 	end
 

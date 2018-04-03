@@ -29,8 +29,8 @@
    
           </div>
         </li>
-         <li class="nav-link"><%= Date.current  %></li>
-        <% else %>
+         <li class="nav-link"><i class="far fa-clock"></i> <%= Date.current  %></li>
+        <% else %><i class="far fa-clock"></i> 
           <%= link_to("Login", new_user_session_path, class: "nav-item nav-link") %>
           <%= link_to("Sign_up", new_user_registration_path, class: "nav-item nav-link") %>
         <% end %>

@@ -30,8 +30,15 @@
 
 
 	<div id="show-comments-section">
-		<h4><%= @post.comments.count %> Comments</h4>
+
+
+		<% if @post.comments.count > 1 %>
+			<h4 style="color: black;"><%= @post.comments.count %> Comments</h4>
+		<% else %>
+			<h4 style="color: black;"><%= @post.comments.count %> Comment</h4>
+		<% end %>
 		<hr>
+
 		<%= render @post.comments   %>
 		<div class="comments-form">
 			<hr>

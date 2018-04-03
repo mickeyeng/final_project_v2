@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_chatroom
+  before_action :users
 
   def create
     message = @chatroom.messages.new(message_params)
@@ -9,7 +10,13 @@ class MessagesController < ApplicationController
     MessageRelayJob.perform_later(message)
   end
 
+
+
   private
+
+  def users
+    @users = User.all
+  end
 
     def set_chatroom
       @chatroom = Chatroom.find(params[:chatroom_id])

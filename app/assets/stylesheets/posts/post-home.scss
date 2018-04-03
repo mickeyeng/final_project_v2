@@ -173,9 +173,15 @@ body.posts.index {
 				 .card {
 				    	box-shadow: 0px 5px 20px #9e9e9ec2;
 				    	padding-bottom: 5px;
+				    	transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+    					transition-delay: .1s;
 
 				    	&:hover {
-				    		opacity: 0.8;
+			    		    opacity: 1 !important;
+						    box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px, rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
+						    transform: translate(0, -4px);
+						    z-index: 999;
+						    transition: 0.40s all ease;
 				    	}
 
 
