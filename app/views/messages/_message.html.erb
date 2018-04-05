@@ -1,3 +1,19 @@
-<div class="jumbotron"><strong> <%= image_tag message.user.profile_picture(:thumb), id: "profile", width: "60" %>
 
-	<%= local_time(message.created_at) %> - <%= message.user.username%> - </strong><%= message.body  %></div>
+
+
+ <div class="chat-box">
+ 	<p><%= local_time(message.created_at) %></p>
+ 	<div class="chat-user-info">
+ 		
+ 		<%= image_tag message.user.profile_picture(:thumb), class: 'faces-chat', width: "60" %>
+ 		<p class="chat-text-username"><%= message.user.username%></p>
+ 		<hr>
+
+
+ 	</div>
+
+ 	<p class="chat-text"><%= message.body %></p>
+ 	
+ </div>
+
+

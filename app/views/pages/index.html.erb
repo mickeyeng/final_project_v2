@@ -11,24 +11,12 @@
 
 
           <%= image_tag("logo/Logo-good.png", id: "logo-heading", width: 350 ) %>
-         <!--  <%= image_tag (current_user.profile_picture.url(:thumb)), id: "profile-picture" %> -->
 
          
 
           <h2 id="welcome-heading">Welcome <%= current_user.username %> to myuel </h2>
           <h3 id="welcome-sub-heading">Your number one place for social life at university </h3>
 
-
-
-
-
-          <!-- <div id="profile-pic">
-            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
-          </div>
-
-          <div id="study-picture">
-            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
-          </div> -->
         </section>
 
   </div> <!-- end of top-content -->
@@ -36,43 +24,102 @@
   <div id="main-content">
       <section id="boxes">
         
-        <%= link_to edit_user_registration_path do %>
             <div id="box1">
-                <%= image_tag("boxes/profile.png", class: "box-image") %>
-                <h1 class="box-text">Profile</h1>
-            </div>
-        <% end %>
+              <!-- <img class="box-image"src="profile.png"> -->
+              <div class="box-headings">
+                <h3 id="profile-text-heading">Manage Profile</h3>
+                <p class="box-sub-heading">Edit | Update | Delete</p>
+              </div>
+
+              <div class="box-images">
+                 <%= image_tag("boxes/profile-1.png", class: "box-image-1") %>
+                <%= image_tag("boxes/profile-2.png", class: "box-image-2") %>
+                <%= image_tag("boxes/profile-3.png", class: "box-image-3") %>
+              </div>
+
+
+              <div class="box-bottom">
+                <%= link_to edit_user_registration_path do %>
+                  <button id="profile-btn" class="btn btn-primary">View Profile</button>
+                 <% end %>
+              </div>
+             
+          </div>
+        
         
 
-         <%= link_to posts_path do %>
+         
         <div id="box2">
-          <%= image_tag("boxes/events.png", class: "box-image") %>
-          <h1 class="box-text">Events</h1>
-        </div>
-        <% end %>
+              <!-- <img class="box-image"src="profile.png"> -->
+              <div class="box-headings">
+                <h3 id="events-text-heading">Create events</h3>
+                <p class="box-sub-heading">Create events for all your classmates to see! </p>
+              </div>
+
+              <div class="box-images">
+                <%= image_tag("boxes/event-1.png", class: "box-image-1") %>
+                <%= image_tag("boxes/event-2.png", class: "box-image-2") %>
+                <%= image_tag("boxes/event-3.png", class: "box-image-3") %>
+              </div>
+
+
+              <div class="box-bottom">
+                <%= link_to posts_path do %>
+                  <button id="event-btn" class="btn btn-primary">Create events</button>
+                <% end %>
+              </div>
+          </div>
+        
         
 
-         <%= link_to chatrooms_path do %>
+         
         <div id="box3">
+              <!-- <img class="box-image"src="profile.png"> -->
+              <div class="box-headings">
+                <h3 id="chat-text-heading">Live chat with friends</h3>
+                <p class="box-sub-heading">Create channels and direct message friends</p>
+              </div>
 
-           <%= image_tag("boxes/chat.png", class: "box-image") %>
-
-         <h1 class="box-text">Chat</h1>
-
-        </div>
-        <% end %>
-
+              <div class="box-images">
+                <%= image_tag("boxes/chat-1.png", class: "box-image-1") %>
+                <%= image_tag("boxes/chat-2.png", class: "box-image-2") %>
+                <%= image_tag("boxes/chat-3.png", class: "box-image-3") %>
+              </div>
 
 
-        <%= link_to pages_users_path do %>
-        <div id="box4">
+              <div class="box-bottom">
+                <%= link_to chatrooms_path do %>
+                  <button id="chat-btn" class="btn btn-primary">Live chat</button>
+                <% end %>
+              </div>
+          </div>
 
-           <%= image_tag("boxes/chat.png", class: "box-image") %>
 
-         <h1 class="box-text">Users</h1>
+          <div id="box4">
+              <!-- <img class="box-image"src="profile.png"> -->
+              <div class="box-headings">
+                <h3 id="user-text-heading">View all users</h3>
+                <p class="box-sub-heading">View you friends public information</p>
+              </div>
 
-        </div>
-        <% end %>
+              <div class="box-images">
+                <%= image_tag("boxes/user-1.png", class: "box-image-1") %>
+                <%= image_tag("boxes/user-2.png", class: "box-image-2") %>
+                <%= image_tag("boxes/user-3.png", class: "box-image-3") %>
+              </div>
+
+
+              <div class="box-bottom">
+                <%= link_to pages_users_path do %>
+                  <button id="user-btn" class="btn btn-primary">View all users</button>
+                <% end %>
+              </div>
+          </div>
+       
+
+
+
+        
 
       
 

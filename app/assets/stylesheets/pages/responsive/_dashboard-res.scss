@@ -2,7 +2,7 @@
 
 // Portrait mobile
 @media all and (max-width: 575px) { 
-	body.index {
+	body.pages.index {
 		#wrapper {
 			grid-template-columns: repeat(1, 1fr);
 			grid-template-areas: 
@@ -74,7 +74,8 @@
 				    grid-template-areas:
 				    "box1"
 				    "box2"
-				    "box3";
+				    "box3"
+				    "box4";
 				  }
 
 				}
@@ -89,7 +90,7 @@
 // small tablet and lanscape mobile up to iphone x size
  @media all and (max-width: 813px) {  
 
-		body.index {
+		body.pages.index {
 		#wrapper {
 			grid-template-columns: repeat(1, 1fr);
 			grid-template-areas: 
@@ -164,7 +165,8 @@
 		    grid-template-areas:
 		    "box1"
 		    "box2"
-		    "box3";
+		    "box3"
+		    "box4";
 		  }
 
 		}

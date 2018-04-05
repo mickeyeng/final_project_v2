@@ -28,8 +28,16 @@
       </div>
    <% end %>
    
+  <% if controller_name == 'chatrooms' %>
+      <%= render 'layouts/nav-empty' %>
+  <% elsif controller_name == 'direct_messages'  %>
+      <%= render 'layouts/nav-empty' %>
+  <% else %>
+      <%= render 'layouts/nav' %>
+ <% end %>
 
-   <%= render 'layouts/nav' %>
+
+ 
  <!--   <p id="notice"><%= notice %></p>
    <p id="alert"><%= alert %></p> -->
    <%= yield %>
@@ -38,9 +46,9 @@
 
 
    <script type="text/javascript">
-      $(".notification-success" ).easeOut(3000);
+      $(".notification-success" ).fadeOut(3000);
 
-      $(".notification-danger" ).easeOut(3000);
+      $(".notification-danger" ).fadeOut(3000);
    </script>
 
 

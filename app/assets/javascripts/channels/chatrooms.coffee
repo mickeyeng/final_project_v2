@@ -20,10 +20,10 @@ App.chatrooms = App.cable.subscriptions.create "ChatroomsChannel",
         App.last_read.update(data.chatroom_id)
 
       # Insert the message
-      active_chatroom.append("<div class='jumbotron'><strong>#{data.username}:</strong> #{data.body}</div>")
+      active_chatroom.append("<div class='chat-box'><div class='chat-user-info'><img class='faces-chat' src='#{data.avatar}'>  <p class='chat-text-username' #{data.username}</p></div><p class='chat-text'>#{data.body}</p>")
 
     else
       $("[data-behavior='chatroom-link'][data-chatroom-id='#{data.chatroom_id}']").append("<p id='unread-message'>Unread message</p>") 
 
-  send_message: (chatroom_id, message) ->
-    @perform "send_message", {chatroom_id: chatroom_id, body: message}
+  send_message: (chatroom_id, avatar, message ) ->
+    @perform "send_message", {chatroom_id: chatroom_id, avatar: avatar, body: message}

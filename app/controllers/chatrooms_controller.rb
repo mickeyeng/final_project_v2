@@ -12,7 +12,6 @@ class ChatroomsController < ApplicationController
   def show
     @messages = @chatroom.messages.order(created_at: :desc).limit(100).reverse
     @chatroom_user = current_user.chatroom_users.find_by(chatroom_id: @chatroom.id)
-    @users = User.all
   end
 
   # GET /chatrooms/new
@@ -71,7 +70,7 @@ class ChatroomsController < ApplicationController
     def set_chatroom
       @chatroom = Chatroom.find(params[:id])
     end
-    
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chatroom_params
