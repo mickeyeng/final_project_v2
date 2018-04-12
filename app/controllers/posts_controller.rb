@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+	before_action :set_post, only: [:show, :vote]
+	respond_to :js, :json, :html
 
 	def index
 		@posts = Post.all.order('created_at DESC')
@@ -18,15 +20,6 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		# @post = current_user.posts.build(post_params)
-
-		# if @post.save
-		# 	redirect_to @post
-		# else
-		# 	render 'new'
-		# end
-
-
 		@post = Post.new(post_params)
 		@post.user_id = current_user.id # assign the post to the user who craeted it
 		
@@ -38,6 +31,17 @@ class PostsController < ApplicationController
 			 	flash[:alert] = "Post was unsuccessfull, please try again."
 			end
 	end
+
+	def vote
+
+    	if !current_user.liked? @post
+     		@post.liked_by current_user
+    	elsif current_user.liked? @post 
+      		@post.unliked_by current_user
+  		end
+
+    end
+ 
 
 	def update
 		@post = Post.find(params[:id])
@@ -66,5 +70,9 @@ class PostsController < ApplicationController
 	def post_params
 		params.require(:post).permit(:user_id, :title, :content, :image)
 	end
+
+	def set_post 
+		@post = Post.find(params[:id])
+	end 
 
 end

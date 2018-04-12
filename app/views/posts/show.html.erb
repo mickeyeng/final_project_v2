@@ -23,7 +23,15 @@
 	</div>
 
 	<div id="show-content-section">
-		<h1><%= @post.title  %></h1>
+		<div id="title-like">
+			<h1><%= @post.title  %></h1>
+				<%= link_to like_post_path(@post), class: 'like-btn', method: :put, remote: :true do %>
+				<div>
+				 	<i id="like-color" class="fas fa-heart fa-2x"></i>
+				</div>
+			<% end %>
+		<span style="margin-left: 0.8%;" class="likes-count"><%= @post.get_upvotes.size  %></span>
+		</div>
 		<br>
 		<p><%= @post.content.html_safe  %></p>
 	</div>
@@ -37,7 +45,7 @@
 		<% else %>
 			<h4 style="color: black;"><%= @post.comments.count %> Comment</h4>
 		<% end %>
-		<hr>
+		
 
 		<%= render @post.comments   %>
 		<div class="comments-form">

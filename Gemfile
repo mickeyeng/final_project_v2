@@ -31,6 +31,7 @@ gem 'redis'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem "paperclip", "~> 5.2.1"
+gem 'aws-sdk', '~> 2.3'
 
 
 gem 'devise'
@@ -38,6 +39,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'ckeditor'
 gem 'local_time'
+gem 'acts_as_votable', '~> 0.11.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -60,6 +62,7 @@ group :development do
   gem 'sqlite3'
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   gem 'guard', '~> 2.14'
+  gem 'rails-erd'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false 
 end
 

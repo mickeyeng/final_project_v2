@@ -32,6 +32,9 @@ Rails.application.routes.draw do
 
 
 	resources :posts do 
+		member do
+			put 'like' => 'posts#vote'
+		end
 		resources :comments
 	end 
 

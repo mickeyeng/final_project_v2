@@ -243,6 +243,12 @@ body.pages.index {
 	  grid-area: box1;
 	  grid-template-columns: repeat(1, 1fr);
 	  grid-auto-rows: 100px;
+	  -webkit-box-shadow: 0 2px 8px 0 #ccb7b742;
+
+	  &:hover {
+	  	    box-shadow: -2px 8px 22px 0 rgba(0, 0, 0, 0.82);
+	  	    transition: box-shadow .25s ease-in,-webkit-box-shadow .25s ease-in;
+	  }
 
 	}
 
@@ -255,6 +261,13 @@ body.pages.index {
 	  grid-area: box2;
 	  grid-template-columns: repeat(1, 1fr);
 	  grid-auto-rows: 100px;
+	  -webkit-box-shadow: 0 2px 8px 0 #ccb7b742;
+
+
+	  &:hover {
+	  	    box-shadow: -2px 8px 22px 0 rgba(0, 0, 0, 0.82);
+	  	    transition: box-shadow .25s ease-in,-webkit-box-shadow .25s ease-in;
+	  }
 	}
 
 	#box3 {
@@ -266,6 +279,12 @@ body.pages.index {
 	  grid-area: box3;
 	  grid-template-columns: repeat(1, 1fr);
 	  grid-auto-rows: 100px;
+	  -webkit-box-shadow: 0 2px 8px 0 #ccb7b742;
+
+	  &:hover {
+	  	    box-shadow: -2px 8px 22px 0 rgba(0, 0, 0, 0.82);
+	  	    transition: box-shadow .25s ease-in,-webkit-box-shadow .25s ease-in;
+	  }
 	}
 
 	#box4 {
@@ -277,6 +296,13 @@ body.pages.index {
 	  grid-area: box4;
 	  grid-template-columns: repeat(1, 1fr);
 	  grid-auto-rows: 100px;
+	 -webkit-box-shadow: 0 2px 8px 0 rgb(47, 23, 23);
+	 transition: box-shadow .25s ease-in,-webkit-box-shadow .25s ease-in;
+
+	  &:hover {
+	  	    box-shadow: -2px 8px 22px 0 rgba(0, 0, 0, 0.82);
+	  	    transition: box-shadow .25s ease-in,-webkit-box-shadow .25s ease-in;
+	  }
 
 	}
 
