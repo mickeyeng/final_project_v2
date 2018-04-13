@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'tags/show'
+
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
 
@@ -37,6 +39,10 @@ Rails.application.routes.draw do
 		end
 		resources :comments
 	end 
+
+	resources :tags
+
+	
 
 
 

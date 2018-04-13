@@ -1,0 +1,31 @@
+<div id="boxes">
+	<% @posts.each do |post| %>
+		<div class="card">
+			<%= image_tag post.image.url(:large), class: "img-fluid" %>
+			<div class="card-content">
+				<h3 class="post-heading"><%= link_to post.title, post%></h3>
+				<hr class="card-hr">
+
+				<p class="post-text"><%= post.content.truncate(140).html_safe %></p>
+
+				<p class="post-creator">Created by <%= User.find(post.user_id).username %></p>
+				<p class="post-creator" style="font-size: 0.7rem;"><%= local_time(post.created_at) %></p>
+
+				<% unless post.tag_list.empty? %>
+					<p><%= raw post.tags.map  { |t| link_to t.name, posts_path(tag: t.name), class: 'tags' }.join(' ')  %></p>
+				<% end %>
+				
+				<button class="btn btn-primary">
+				 	<i id="like-color" class="fas fa-heart"></i>
+				 	<span class="likes-count"><%= post.get_upvotes.size  %></span>
+				</button>
+				<br>
+				<hr>
+
+
+				<button class="btn read-post-btn btn-danger">Read More</button>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>
