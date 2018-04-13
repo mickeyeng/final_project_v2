@@ -24,55 +24,15 @@
 		
 		<p id="count-comment"><i class="fas fa-comments"></i> Comments <%= @comments.count %></p>
 
-		<p id="count-tags"><i class="fas fa-hashtag"></i> Tags  <%= @posts.count %></p>
+		<p id="count-tags"><i class="fas fa-hashtag"></i> Tags  <%= @countTags %></p>
 	</div>
+	
+	
+		
+  	
 
 	<div id="posts-section">
-		
-		
-			
-			<div id="boxes">
-				<% @posts.each do |post| %>
-					<div class="card">
-						<%= image_tag post.image.url(:large), class: "img-fluid" %>
-						<div class="card-content">
-							<h3 class="post-heading"><%= link_to post.title, post%></h3>
-							<hr class="card-hr">
-
-
-							 
-
-
-							 
-
-							<p class="post-text"><%= post.content.truncate(140).html_safe %></p>
-
-							<p class="post-creator">Created by <%= User.find(post.user_id).username %></p>
-							<p class="post-creator" style="font-size: 0.7rem;"><%= local_time(post.created_at) %></p>
-							<%= link_to like_post_path(post), class: 'like-btn', method: :put, remote: :true do %>
-								<div>
-								 	<i id="like-color" class="fas fa-heart"></i>
-								</div>
-							<% end %>
-							<span class="likes-count"><%= post.get_upvotes.size  %></span>
-							<br>
-							<hr>
-
-
-							<button class="btn read-post-btn btn-danger">Read More</button>
-						</div>
-					</div>
-
-					
-					<% end %>
-				</div>
-
-			</div>
-
-			
-
-		
-
+		<%= render 'post' %>
 	</div>
 
 

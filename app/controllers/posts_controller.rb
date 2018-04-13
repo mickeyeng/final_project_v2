@@ -3,10 +3,17 @@ class PostsController < ApplicationController
 	respond_to :js, :json, :html
 
 	def index
-		@posts = Post.all.order('created_at DESC')
+		if params[:tag]
+			@posts = Post.all.tagged_with(params[:tag]).order("created_at DESC")
+		else 
+			@posts =  Post.all.order("created_at DESC")
+		end
+		@countTags = Post.all.tag_counts_on(:tags).size
 		@comments = Comment.all
 		@users = User.all
 	end 
+
+
 
 	# @post = Post.find(params[:id])
 	# 	@user = User.find(params[:id])
@@ -53,6 +60,10 @@ class PostsController < ApplicationController
 		end
 	end 
 
+	def tag_list
+  		self.tags.map(&:name).join(', ')
+	end
+
 
 	def destroy
 		@post = Post.find(params[:id])
@@ -68,7 +79,7 @@ class PostsController < ApplicationController
 	private 
 
 	def post_params
-		params.require(:post).permit(:user_id, :title, :content, :image)
+		params.require(:post).permit(:user_id, :title, :content, :image, :tag_list)
 	end
 
 	def set_post 
