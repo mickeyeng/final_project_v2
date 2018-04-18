@@ -10,13 +10,13 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <%= form.label :name, class: "input-group-text", id:"inputGroup-sizing-default" %>
-      <%= form.text_field :name, id: :chatroom_name, class:"form-control" %>
+          
+  <!-- <div class="input-group mb-3"> -->
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :chatroom_name, class:"form-control", placeholder: 'Name of Chatrooom' %>
     </div>
-  </div>
+<!--   </div> -->
 
 
 
@@ -24,6 +24,6 @@
 
 
   <div class="actions">
-    <%= form.submit %>
+      <%= form.submit class:'btn btn-primary' %>
   </div>
 <% end %>

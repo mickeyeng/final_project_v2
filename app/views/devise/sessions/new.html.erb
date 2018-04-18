@@ -1,4 +1,4 @@
-
+<!-- 
 
 <div class="login-grid">
 
@@ -13,13 +13,13 @@
       <h2>Log in</h2>
       <hr>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-       <!--  <div class="form-group">
+       <! <div class="form-group">
           <%= f.label :username %><br />
           <%= f.text_field :username, class: "form-control" %>
         </div> -->
 
 
-        <div class="form-group">
+       <!--  <div class="form-group">
           <%= f.label :email %><br />
           <%= f.email_field :email, class: "form-control", autofocus: true %>
         </div>
@@ -44,8 +44,59 @@
     <%= render "devise/shared/links" %>
     </div>
   </div>
-</div> <!-- login grid
+</div> --> <!-- login grid
  -->
+<!--  --> <!-- --> 
+
+
+
+
+
+<div class="login-wrapper">
+
+  <section class="login-grid">
+
+    <div class="login">
+      <%= image_tag("login/login", id: 'login-logo') %>
+      <h3 class="login-text">Welcome to myuel</h3>
+      <h3 class="login-text">Please Login</h3>
+
+
+      
+         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-group">
+              <%= f.text_field :email, class: "form-control input", placeholder: "Email address" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.password_field :password, class: "form-control input", autocomplete: "off", placeholder: "Password" %>
+            </div>
+
+          <% if devise_mapping.rememberable? -%>
+            <div class="form-group">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
+          
+        <div class="actions">
+          <%= f.submit "Log in", class: "btn login-btn" %>
+        </div>
+
+        <%= render "devise/shared/links" %>
+
+
+
+         <% end %>
+
+
+
+    </div>
+
+  </section>
+
+</div>
+
 
 
 

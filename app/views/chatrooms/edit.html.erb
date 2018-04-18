@@ -1,18 +1,17 @@
-<h1>Editing Chatroom</h1>
 
 
-<div class="wrapper">
 
-	<div class="logo">
-       <%= image_tag("logo/Logo-good-small.png") %>
-    </div>
-
-	<div class="content">
-		<div id="form">
-			<%= render 'form', chatroom: @chatroom %>
-
-			<%= link_to 'Show', @chatroom, id: "edit" %> |
-			<%= link_to 'Back', chatrooms_path, id: "edit" %>
-		</div>
+<div class="post-form-wrapper">
+	<div class="post-form">
+		<h3 class="login-text" >Update <%= @chatroom.name  %> channel</h3>
+		<%= render 'form', chatroom: @chatroom %>
+		<br>
+		<%= link_to 'Show', @chatroom, id: "edit", class: 'btn btn-success' %> 
+		<%= link_to 'Back', chatrooms_path, class: 'btn btn-danger' %>
 	</div>
 </div>
+
+
+
+
+

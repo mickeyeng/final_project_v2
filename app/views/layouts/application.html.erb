@@ -8,9 +8,6 @@
    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-
-
-
  </head>
 
  <body class="<%= controller_name %> <%= action_name %>">
@@ -31,6 +28,8 @@
   <% if controller_name == 'chatrooms' %>
       <%= render 'layouts/nav-empty' %>
   <% elsif controller_name == 'direct_messages'  %>
+      <%= render 'layouts/nav-empty' %>
+  <% elsif !user_signed_in? %>
       <%= render 'layouts/nav-empty' %>
   <% else %>
       <%= render 'layouts/nav' %>

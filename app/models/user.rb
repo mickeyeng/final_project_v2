@@ -6,9 +6,15 @@ class User < ApplicationRecord
 	validates_attachment_content_type :profile_picture, content_type: /\Aimage\/.*\z/
   acts_as_voter
 
-
-
+  validates :username, uniqueness: true
   validates :email, format: { with: /\b[A-Z0-9._%a-z\-]+@(uel)\.ac.uk\z/, message: "must end in uel.ac.uk account" }
+
+
+  validates :first_name, presence: true;
+  validates :last_name, presence: true;
+  validates :username, presence: true;
+
+
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 

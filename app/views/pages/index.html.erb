@@ -6,15 +6,15 @@
         <section id="welcome">
 
           <%= image_tag (current_user.profile_picture.url(:thumb)), id: "profile" %>
-          <p id="name"><%= current_user.first_name%> <%= current_user.last_name  %></p>
-          <p id="study"><%= current_user.course  %> - Level <%= current_user.degree_level  %></p>
+          <p id="name"><%= current_user.first_name.upcase_first%> <%= current_user.last_name.upcase_first  %></p>
+          <p id="study"><%= current_user.course.upcase_first  %> - Level <%= current_user.degree_level  %></p>
 
 
           <%= image_tag("logo/Logo-good.png", id: "logo-heading", width: 350 ) %>
 
          
 
-          <h2 id="welcome-heading">Welcome <%= current_user.username %> to myuel </h2>
+          <h2 id="welcome-heading">Welcome to myuel <%= current_user.username.upcase_first %>!</h2>
           <h3 id="welcome-sub-heading">Your number one place for social life at university </h3>
 
         </section>

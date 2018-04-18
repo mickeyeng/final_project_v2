@@ -42,6 +42,9 @@ gem 'local_time'
 gem 'acts_as_votable', '~> 0.11.1'
 gem 'acts-as-taggable-on'
 
+
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

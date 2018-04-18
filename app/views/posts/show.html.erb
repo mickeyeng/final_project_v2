@@ -26,9 +26,10 @@
 		<div id="title-like">
 			<h1><%= @post.title  %></h1>
 				<%= link_to like_post_path(@post), class: 'like-btn', method: :put, remote: :true do %>
-					<div>
-					 	<i id="like-color" class="fas fa-heart fa-2x"></i>
-					</div>
+					<button class="btn btn-success">
+					 	<i id="like-color" class="fas fa-heart"></i>
+					 	<span class="likes-count"><%= @post.get_upvotes.size  %></span>
+					</button>
 				<% end %>
 				
 				<% unless @post.tag_list.empty? %>
@@ -39,7 +40,7 @@
 				
 			
 			
-		<span style="margin-left: 0.8%;" class="likes-count"><%= @post.get_upvotes.size  %></span>
+		
 		</div>
 		<br>
 		<p><%= @post.content.html_safe  %></p>

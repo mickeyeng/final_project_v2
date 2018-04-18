@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 		end
 		@countTags = Post.all.tag_counts_on(:tags).size
 		@comments = Comment.all
-		@users = User.all
+		@user = User.all
 	end 
 
 
@@ -60,9 +60,7 @@ class PostsController < ApplicationController
 		end
 	end 
 
-	def tag_list
-  		self.tags.map(&:name).join(', ')
-	end
+	
 
 
 	def destroy

@@ -28,8 +28,10 @@
     <div class="four-grid">
       <!-- <i id="hashtag" class="fab fa-slack-hash fa-lg"></i> -->
       <p><%= link_to chatroom.name, chatroom, :method => :get, id: "channel-name" %></p>
-      <%= link_to 'UPDATE', edit_chatroom_path(chatroom), class: "btn btn-secondary", id: "update" %>
-      <%= link_to 'REMOVE', chatroom, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-secondary", id: "remove" %>
+      <% if @chatroom_user == current_user %>
+        <%= link_to 'UPDATE', edit_chatroom_path(chatroom), class: "btn btn-secondary", id: "update" %>
+        <%= link_to 'REMOVE', chatroom, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-secondary", id: "remove" %>
+      <% end %>
       <%= link_to "JOIN", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "join", method: :post %>
       <%= link_to "LEAVE", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "leave", method: :delete %>
     </div>
