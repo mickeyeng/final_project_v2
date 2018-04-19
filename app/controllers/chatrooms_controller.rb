@@ -27,6 +27,7 @@ class ChatroomsController < ApplicationController
   # POST /chatrooms.json
   def create
     @chatroom = Chatroom.new(chatroom_params)
+    @chatroom.userid = current_user.id
 
     respond_to do |format|
 

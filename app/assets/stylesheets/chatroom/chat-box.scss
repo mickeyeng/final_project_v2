@@ -6,7 +6,8 @@
   grid-template-columns: 30vw 60vw 10vw;
   grid-template-areas:
   "sidebar-left main sidebar-right";
-  transition: 0.3s all ease-in-out;
+  transition: all 0.3s;
+
 
   &:hover {
   	transition: 0.3s all ease-in-out;
@@ -25,40 +26,44 @@
 
 	  .sidebar-wrappper {
 		  display: grid;
-		  grid-template-columns: repeat(2, 1fr);
+		  grid-template-columns: repeat(3, 1fr);
 		  grid-auto-rows: minmax(50px, auto);
 		  grid-template-areas:
-		  "back edit"
-		  "logo logo"
-		  "heading heading"
-		  "chatroom-names chatroom-names"
-		  ". ."
-		  "direct-message direct-message";
+		  "back edit remove"
+		  "logo logo logo"
+		  "heading heading heading"
+		  "chatroom-names chatroom-names chatroom-names"
+		  ". . ."
+		  "direct-message direct-message direct-message";
 		  /* "chatroom-names chatroom-names chatroom-names"; */
 
 
-		  #unread-message {
-			padding: 10px;
-		    background-color: #fb3939;
-		    text-align: center;
-		    text-decoration: none;
-		    margin-top: 5%;
-		}
+		 
 
 
 
 	  	#back-btn {
-		  padding: 20px;
+		  padding: 10px;
 		  border-radius: 0px;
 		  grid-area: back;
+		  transition: all 0.3s;
 	
 		}
 
 		#edit-btn {
-		  padding: 20px;
+		  padding: 10px;
 		  border-radius: 0px;
 		  grid-area: edit;
-		  justify-self: center;
+		  transition: all 0.3s;
+		  
+		}
+
+		#remove-btn {
+		  padding: 10px;
+		  border-radius: 0px;
+		  grid-area: remove;
+		  transition: all 0.3s;
+		  // justify-self: center;
 		}
 
 
@@ -139,6 +144,7 @@
 	  width: 10vw;
 	  /* height: 100vh; */
 	  background-image: linear-gradient(160deg, #216c98 30%, #80D0C7 100%);
+	  height: 100vh;
 	  /* position: sticky; */
 
 
@@ -157,6 +163,19 @@
 			}
 
 			.users {
+
+
+			#unread-message {
+				padding: 10px;
+			    background-color: #fb3939;
+			    text-align: center;
+			    text-decoration: none;
+			    color: white;
+			    background: red;
+			    margin-top: 15%;
+			    border-radius: 7px;
+			    padding: 8px;	
+			}
 
 				color: white;
 				text-align: center;

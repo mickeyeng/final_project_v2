@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 		end
 		@countTags = Post.all.tag_counts_on(:tags).size
 		@comments = Comment.all
-		@user = User.all
+		@users = User.all
 	end 
 
 

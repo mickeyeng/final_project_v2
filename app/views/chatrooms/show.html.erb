@@ -7,15 +7,17 @@
   <div class="sidebar-wrappper">
 
   
-
-
-  <div id="back-btn">
+ <div id="back-btn">
     <%= link_to 'Back', chatrooms_path, class: "btn btn-danger", id: "back-btn" %>
   </div>
-
+  <% if current_user.id == @chatroom.userid %>
   <div id="edit-btn">
     <%= link_to 'Edit', edit_chatroom_path(@chatroom), class: "btn btn-success", id: "edit-btn" %> 
   </div>
+  <div id="remove-btn">
+    <%= link_to 'Remove', @chatroom, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", id: "remove-btn" %>
+  </div>
+  <% end %>
 
   <%= image_tag("logo/Logo-good-small.png", id: "chat-logo", class: "img-fluid") %>
 
@@ -30,7 +32,7 @@
 	</div>
   <% end %>
 
-  <p id="notice"><%= notice %></p>
+<!--   <p id="notice"><%= notice %></p> -->
 
 
    

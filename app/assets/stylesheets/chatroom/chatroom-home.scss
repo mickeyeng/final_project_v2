@@ -17,13 +17,25 @@ body.chatrooms.index {
     grid-template-rows: 25vh;
     grid-auto-rows: auto;
     align-items: center;
-    padding-top: 5%;
     justify-items: center; /* adjusted */
     grid-template-areas:
+    "back"
     "logo"
     "notice"
     "content"
     "content";
+
+    .back-btn{
+      padding: 20px;
+      background-color: red;
+      border: none;
+      border-radius: 0px;
+      grid-area: back;
+      justify-self: start;
+      margin: 30px;
+      color: white;
+      width: 20%;
+    }
 
     hr {
   	  background-color: #3A5695;
@@ -89,6 +101,7 @@ body.chatrooms.index {
     	grid-row: 1;
     	font-size: 20px;
     	font-weight: 600;
+      grid-column: 1/5;
 
     }
 
