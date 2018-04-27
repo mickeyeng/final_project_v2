@@ -1,3 +1,4 @@
+<div id="fakeLoader"></div>
 <div id="wrapper">
   
   <div id="top-content">
@@ -14,7 +15,7 @@
 
          
 
-          <h2 id="welcome-heading">Welcome to myuel <%= current_user.username.upcase_first %>!</h2>
+          <h2 class="animated bounceInUp" id="welcome-heading">Welcome to myuel <%= current_user.username.upcase_first %>!</h2>
           <h3 id="welcome-sub-heading">Your number one place for social life at university </h3>
 
         </section>
@@ -28,7 +29,7 @@
               <!-- <img class="box-image"src="profile.png"> -->
               <div class="box-headings">
                 <h3 id="profile-text-heading">Manage Profile</h3>
-                <p class="box-sub-heading">Edit | Update | Delete</p>
+                <p class="box-sub-heading">Update your account here</p>
               </div>
 
               <div class="box-images">
@@ -99,7 +100,7 @@
               <!-- <img class="box-image"src="profile.png"> -->
               <div class="box-headings">
                 <h3 id="user-text-heading">View all users</h3>
-                <p class="box-sub-heading">View you friends public information</p>
+                <p class="box-sub-heading">View your friends public information</p>
               </div>
 
               <div class="box-images">
@@ -133,3 +134,18 @@
 
 
 </div> <!-- wrapper -->
+<script type="text/javascript">
+
+$("#fakeLoader").fakeLoader({
+timeToHide:1200, //Time in milliseconds for fakeLoader disappear
+
+zIndex:"999",//Default zIndex
+
+spinner:"spinner1",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+
+bgColor:"#216c98", //Hex, RGB or RGBA colors
+
+// imagePath:"yourPath/customizedImage.gif" //If you want can you insert your custom image
+});
+
+</script>

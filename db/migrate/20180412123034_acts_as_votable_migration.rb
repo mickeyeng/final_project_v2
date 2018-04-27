@@ -19,4 +19,4 @@ rake db:migrateclass ActsAsVotableMigration < ActiveRecord::Migration[5.0]
   def self.down
     drop_table :votes
   end
-
+end

@@ -261,7 +261,74 @@ body.posts.index {
 
 	}
 
+}
+
+@media all and (max-width: 575px)  {
+body.posts.index {
+
+		
+	#posts-home-wrapper {
+		margin: 30px;
+		grid-template-columns: repeat(1, 1fr);
+
+		#add-post-button{
+			width: 100%;
+			padding: 10px;
+		}
+
+		#back-to-dash {
+			width: 100%;
+			padding: 10px;
+		}
+
+
+		#header {
+			#main-heading {
+				font-size: 1.5rem;
+				line-height: 30px;
+			}
+		}
+
+		#post-count-section {
+			grid-template-columns: repeat(1, 1fr);
+
+			#count-post {
+				font-size: 1.5rem;
+			}
+
+			#count-user {
+				font-size: 1.5rem;
+			}
+
+			#count-tags {
+				font-size: 1.5rem;
+			}
+
+			#count-comment {
+				font-size: 1.5rem;
+			}
+		}
+
+
+		#posts-section {
+
+		
+			#boxes {
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
+
+
+
+	}
+
+
+
+
+	}
+
 
 
 
 }
+

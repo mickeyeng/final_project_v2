@@ -4,7 +4,7 @@ class Chatroom < ApplicationRecord
   has_many :messages, dependent: :destroy
 
 
-
+  validates :name, presence: true;
   scope :public_channels, ->{ where(direct_message: false) }
   scope :direct_messages, ->{ where(direct_message: true) }
 
