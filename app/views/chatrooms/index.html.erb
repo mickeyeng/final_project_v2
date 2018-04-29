@@ -1,66 +1,57 @@
-<div class="wrapper">
-
-   <p id="notice"><%= notice %></p>
-    
-    
-      <%= link_to 'Back', root_path, class: 'btn back-btn btn-danger' %>
-   
-
-    <div class="logo">
-       <%= image_tag("logo/Logo-good-small.png") %>
-    </div>
-
-
-
-    <br>
-
-    <div class="content">
-
-    <div class="heading">
-        <p>Channels</p>
-    </div>
-
-    <div class="one-grid">
-        <%= image_tag("chat-sm.png", id: "chat" ) %>
-    </div>
-
-    <hr>
-
-
-<% @chatrooms.each do |chatroom| %>
-    <div class="four-grid">
-      <!-- <i id="hashtag" class="fab fa-slack-hash fa-lg"></i> -->
-      <p id="channel-name"><%= chatroom.name %></p>
-      
-  <% if current_user.id == chatroom.userid %>
-       <%= link_to 'UPDATE', edit_chatroom_path(chatroom), class: "btn btn-secondary", id: "update" %>
-        <%= link_to 'REMOVE', chatroom, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-secondary", id: "remove" %>
-      <%= link_to "LEAVE", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "leave", method: :delete %>
-      <%= link_to "JOIN", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "join", method: :post %>
-  <% else %>
-     <%= link_to "JOIN", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "join", method: :post %>
-     <%= link_to "LEAVE", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary", id: "leave", method: :delete %>
-  <% end %>
-    </div>
-    <hr>
-<% end %>
 
 
 
 
 
 
+<div id="channel-wrapper">
 
-  <br>
+  <div id="chatroom-logo">
+      <%= image_tag("logo/Logo-good-small.png") %>
+  </div>
+  
+  <div class="back-btn">
+    <%= link_to 'Back', root_path, class: 'btn back-btn btn-danger' %>
+  </div>
 
 
 
+  <div class="channel-box">
+    <h2 id="channel-heading">Channels</h2>
 
-    <div class="add-channel">
-      <%= link_to 'Add Channel + ', new_chatroom_path, id: "add" %>
-    </div>
+      <div class="chat-image">
+         <%= image_tag("chat-sm.png", id: "channel-logo" ) %>
+      </div>
+      <div class="line"></div>
+      <% @chatrooms.each do |chatroom| %>
+        <div class="channel-name">
+          <!-- <p id="channel-name"><%= chatroom.name %></p> -->
+
+          <%= link_to chatroom.name, chatroom_chatroom_users_path(chatroom), class: "", id: "channel-name", method: :post %>
+
+
+          <% if current_user.id == chatroom.userid %>
+            <%= link_to 'UPDATE', edit_chatroom_path(chatroom), class: "btn btn-primary buttons", id: "update" %>
+
+            <%= link_to 'REMOVE', chatroom, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger buttons", id: "remove" %>
+
+             <%= link_to "LEAVE", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary buttons", id: "leave", method: :delete %>
+
+           <!--  <%= link_to "JOIN", chatroom_chatroom_users_path(chatroom), class: "btn btn-success buttons", id: "join", method: :post %> -->
+          <% else %>
+            <%= link_to "LEAVE", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary buttons", id: "leave", method: :delete %>
+
+           <!--  <%= link_to "JOIN", chatroom_chatroom_users_path(chatroom), class: "btn btn-success buttons", id: "join", method: :post %> -->
+          <% end %>
+        </div>
+        <div class="line"></div>
+      <% end %>
+
+      <div class="add-channel">
+        <%= link_to 'Add Channel + ', new_chatroom_path, id: "add-btn", class: 'btn btn-primary' %>
+      </div>
+
 
   </div>
-  <!-- content div -->
 
 </div>

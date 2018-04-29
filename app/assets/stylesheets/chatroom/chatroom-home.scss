@@ -2,218 +2,126 @@ $main-background-color: linear-gradient(160deg, #216c98 30%, #80D0C7 100%);
 
 
 body.chatrooms.index {
-  
   background: $main-background-color;
 
-  .bg-light {
-    background-color: transparent!important;
-    border-bottom: 1px solid silver;
-  }
-
-
-  .wrapper {
+    #channel-wrapper {
+    margin-top: 5%;
+    padding-bottom: 5%;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 25vh;
-    grid-auto-rows: auto;
-    align-items: center;
-    justify-items: center; /* adjusted */
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-    "back"
-    "logo"
-    "notice"
-    "content"
-    "content";
+    "back logo logo ."
+    ". channel-box channel-box .";
 
-    .back-btn{
-      padding: 20px;
-      background-color: red;
-      border: none;
-      border-radius: 0px;
+
+    .back-btn {
       grid-area: back;
-      justify-self: start;
-      margin: 30px;
-      color: white;
-      width: 20%;
+      justify-self: center;
+      padding: 20px;
+      border-radius: 0px;
     }
 
-    hr {
-  	  background-color: #3A5695;
-  	  padding: 5px;
-   }
+    #chatroom-logo {
+      grid-area: logo;
+      justify-self: center;
 
-   .logo {
-  	  grid-area: logo;
-  	  padding-top: 25px;
-   }
+      .logo {
+        width: 200px;
+      }
 
-  #notice {
-    grid-area: "notice";
-    color: white;
-    padding: 20px;
-    font-size: 20px;
-  }
-
-   .content {
-    grid-area: content;
-    height: 100%;
-    width: 75vh;
-    background-color: white;
-
-    .heading {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 25px;
-    background-color: #3A5695;
-
-    p {
-    	color: white;
-  	font-size: 35px;
-  	justify-self: center;
-  	font-weight: 800;
     }
 
 
 
-  }
+    .channel-box {
 
-  .one-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 25px;
-    justify-self: center;
-
-    #chat {
-    	justify-self: center;
-  }
-
-
-  }
-
-  .four-grid {
-    display: grid;
-    padding: 20px;
-    grid-gap: 0px;
-    grid-template-columns: repeat(5, 90px);
-
-
-    #channel-name {
-    	grid-row: 1;
-    	font-size: 20px;
-    	font-weight: 600;
-      grid-column: 1/5;
-
-    }
-
-    #update {
-    	grid-row: 2;
-    	background-color: #3A5695;
-    	border-radius: 8px;
-    	color: white;
-    	border: 0px;
-    	width: 80px;
-    }
-
-    #remove {
-      grid-row: 2;
-      background-color: red;
-      border-radius: 8px;
-      color: white;
-      border: 0px;
-      width: 80px;
-  }
-
-  #join {
-      grid-row: 2;
-      background-color: #3A9541;
-      border-radius: 8px;
-      color: white;
-      border: 0px;
-      width: 80px;
-  }
-
-  #leave {
-      grid-row: 2;
-      background-color: #E89818;
-      border-radius: 8px;
-      color: white;
-      border: 0px;
-      width: 80px;
-  }
-
-
-
-  }
-
-  .add-channel {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 100px;
-    padding-top: 30px;
-
-  }
-
-  #add {
-    padding: 25px;
-    background-color: #577EB9;
-    border: 0;
-    color: white;
-    font-size: 30px;
-    font-weight: 600;
-    justify-self: center;
-  }
-
-
-
-  }
-
-
-  }
-  // end of wrapper
-}
-
-
-  @media (max-width: 599px) {
-    .wrapper {
-    	padding-top: 20%;
+      /* padding: 10px; */
+      grid-area: channel-box;
+      /* grid-gap: 10px; */
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 25vh;
-      align-items: center;
-      justify-items: center; /* adjusted */
-      grid-template-areas:
-      "logo"
-      "notice"
-      "content"
-      "content";
+      grid-template-columns: repeat(1, 1fr);
+      background-color: white;
+      overflow: scroll;
 
 
-      .content {
-      width: 50vh;
+      #channel-heading {
+        padding: 20px;
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        background-color: #3A5695;
+        margin: 0;
+    }
 
-        .four-grid {
+    .chat-image {
+        background-color: white;
+        justify-self: center;
+      }
+
+
+    #channel-logo {
+      background-color: white;
+      padding: 20px;
+
+    }
+
+    .line {
+      background-color: #3A5695;
+      padding: 5px;
+    }
+
+
+    .channel-name {
+      padding: 20px;
       display: grid;
-      grid-gap: 10px;
-      padding: 15px;
       grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
+      font-weight: 600;
 
-      #join {
-      grid-row: 3;
+
+      #channel-name {
+        grid-row: 1;
+        grid-column: 1 /4;
+        color: black;
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding-bottom: 15px;
+
+        
+    }
+
+
+    .buttons {
+      margin: 0;
+      grid-row: 2;
+      padding: 5px;
+    }
+
+
+   
 
     }
 
-    #leave {
-      grid-row: 3;
-    }
-    
-    }
-  	.add-channel {
-      padding: 30px;
-      padding-top: 20px;
+     .add-channel {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 5px;
+      font-weight: 600;
+
+
+      #add-btn {
+        justify-content: center;
+        border-radius: 0px;
+        padding: 30px;
+        font-size: 1.5rem;
     }
 
-    
+
+
+
     }
+
 
 
 
@@ -222,15 +130,27 @@ body.chatrooms.index {
 
   }
 
-    
-
-
-
 
   }
+}
 
   @media all and (max-width: 575px)  {
     body.chatrooms.index {
+      
+      #channel-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        "back back back back"
+        "logo logo logo logo"
+        "channel-box channel-box channel-box channel-box";
+
+    }
+
+
+    .channel-box {
+      margin: 10px;
+    }
+      
 
     }
   }

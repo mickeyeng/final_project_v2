@@ -11,7 +11,7 @@
           <p id="study"><%= current_user.course.upcase_first  %> - Level <%= current_user.degree_level  %></p>
 
 
-          <%= image_tag("logo/Logo-good.png", id: "logo-heading", width: 350 ) %>
+          <%= image_tag("logo/Logo-good.png", id: "logo-heading", width: 350, class: "animated pulse" ) %>
 
          
 
@@ -33,7 +33,7 @@
               </div>
 
               <div class="box-images">
-                 <%= image_tag("boxes/profile-1.png", class: "box-image-1") %>
+                <%= image_tag("boxes/profile-1.png", class: "box-image-1") %>
                 <%= image_tag("boxes/profile-2.png", class: "box-image-2") %>
                 <%= image_tag("boxes/profile-3.png", class: "box-image-3") %>
               </div>
