@@ -82,7 +82,7 @@ body.pages.index {
 		  font-family: 'Open Sans', sans-serif;
 		  font-weight: 800;
 		  text-align: center;
-		  animation-delay: 1s;
+		  animation-delay: 1.5s;
 		}
 
 		#welcome-sub-heading {
@@ -93,7 +93,7 @@ body.pages.index {
 		  /* font-weight: 800; */
 		  font-style: italic;
 		  text-align: center;
-		  animation-delay: 1.7s;
+		  animation-delay: 2s;
 		}
 
 	
@@ -162,12 +162,13 @@ body.pages.index {
 
 	.box-images {
 		  display: grid;
-		  grid-template-columns: repeat(3, 1fr);
+		  grid-template-columns: repeat(5, 1fr);
 
 
 		 .box-image-1 {
 			width: 75.5px;
 			justify-self: center;
+			grid-column: 2;
 		}
 
 		.box-image-2 {
