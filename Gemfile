@@ -39,7 +39,6 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'ckeditor'
 gem 'local_time'
-gem 'acts_as_votable', '~> 0.11.1'
 gem 'acts-as-taggable-on'
 
 
@@ -54,6 +53,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'acts_as_votable', '~> 0.11.1'
 end
 
 group :development do

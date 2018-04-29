@@ -1,4 +1,4 @@
-rake db:migrateclass ActsAsVotableMigration < ActiveRecord::Migration[5.0]
+rake db:migrateclass ActsAsVotableMigration < ActiveRecord::Migration[5.1]
   def self.up
     create_table :votes do |t|
 
