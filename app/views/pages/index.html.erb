@@ -7,8 +7,10 @@
         <section id="welcome">
 
           <%= image_tag (current_user.profile_picture.url(:thumb)), id: "profile" %>
-          <p id="name"><%= current_user.first_name.upcase_first%> <%= current_user.last_name.upcase_first  %></p>
-          <p id="study"><%= current_user.course.upcase_first  %> - Level <%= current_user.degree_level  %></p>
+          <div id="name">
+            <p id=""><%= current_user.first_name.upcase_first%> <%= current_user.last_name.upcase_first  %></p>
+            <p id=""><%= current_user.course.upcase_first  %> - Level <%= current_user.degree_level  %></p>
+          </div>
 
 
           <%= image_tag("logo/Logo-good.png", id: "logo-heading", width: 350, class: "animated pulse" ) %>
@@ -16,7 +18,7 @@
          
 
           <h2 class="animated bounceInUp" id="welcome-heading">Welcome to myuel <%= current_user.username.upcase_first %>!</h2>
-          <h3 id="welcome-sub-heading">Your number one place for social life at university </h3>
+          <h3 class="animated bounceInUp" id="welcome-sub-heading">Your number one place for social life at university </h3>
 
         </section>
 
@@ -137,15 +139,14 @@
 <script type="text/javascript">
 
 $("#fakeLoader").fakeLoader({
-timeToHide:1200, //Time in milliseconds for fakeLoader disappear
+  timeToHide:1200, //Time in milliseconds for fakeLoader disappear
 
-zIndex:"999",//Default zIndex
+  zIndex:"999",//Default zIndex
 
-spinner:"spinner1",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+  spinner:"spinner1",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
 
-bgColor:"#216c98", //Hex, RGB or RGBA colors
+  bgColor:"#216c98", //Hex, RGB or RGBA colors
 
-// imagePath:"yourPath/customizedImage.gif" //If you want can you insert your custom image
 });
 
 </script>

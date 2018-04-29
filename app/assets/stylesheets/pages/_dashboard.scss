@@ -61,8 +61,8 @@ body.pages.index {
 		  grid-area: logo;
 		  color: white;
 		  justify-self: center;
-		  animation-delay: 2s;
-		  animation-duration: 10s;
+		  animation-delay: 1s;
+		  animation-duration: 5s;
 		  // animation-iteration-count: infinite;
 
 		}
@@ -82,7 +82,7 @@ body.pages.index {
 		  font-family: 'Open Sans', sans-serif;
 		  font-weight: 800;
 		  text-align: center;
-		  animation-delay: 2s;
+		  animation-delay: 1s;
 		}
 
 		#welcome-sub-heading {
@@ -93,6 +93,7 @@ body.pages.index {
 		  /* font-weight: 800; */
 		  font-style: italic;
 		  text-align: center;
+		  animation-delay: 1.7s;
 		}
 
 	
@@ -112,9 +113,11 @@ body.pages.index {
 	  display: grid;
 	  grid-gap: 20px;
 	  grid-template-columns: repeat(3, 1fr);
+	  padding-bottom: 10%;
 	  grid-template-areas:
 	  "box1 box2 box3"
 	  "box4 . .";
+
 
 
 	  .box-headings {

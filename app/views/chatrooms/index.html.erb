@@ -35,11 +35,11 @@
 
             <%= link_to 'REMOVE', chatroom, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger buttons", id: "remove" %>
 
-             <%= link_to "LEAVE", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary buttons", id: "leave", method: :delete %>
+             <%= link_to "LEAVE", chatroom_chatroom_users_path(chatroom), class: "btn btn-success buttons", id: "leave", method: :delete %>
 
            <!--  <%= link_to "JOIN", chatroom_chatroom_users_path(chatroom), class: "btn btn-success buttons", id: "join", method: :post %> -->
           <% else %>
-            <%= link_to "LEAVE", chatroom_chatroom_users_path(chatroom), class: "btn btn-secondary buttons", id: "leave", method: :delete %>
+            <%= link_to "LEAVE", chatroom_chatroom_users_path(chatroom), class: "btn btn-success buttons", id: "leave", method: :delete %>
 
            <!--  <%= link_to "JOIN", chatroom_chatroom_users_path(chatroom), class: "btn btn-success buttons", id: "join", method: :post %> -->
           <% end %>

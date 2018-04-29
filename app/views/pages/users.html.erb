@@ -2,8 +2,7 @@
 
 	<div id="users-box" style="overflow-y:auto;">
 		<table class="table table-hover table-light">
-			<% @users.each do |user| %>
-		  <thead id="table-header">
+			<thead id="table-header">
 		    <tr>
 		      <th scope="col">Profile</th>
 		      <th scope="col">First Name</th>
@@ -12,6 +11,7 @@
 		      <th scope="col">Year</th>
 		    </tr>
 		  </thead>
+			<% @users.each do |user| %>
 		  <tbody>
 		    <tr>
 		    <% if user.profile_picture_file_name.blank? %>	
