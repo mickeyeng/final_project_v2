@@ -53,7 +53,6 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'acts_as_votable', '~> 0.11.1'
 end
 
 group :development do
@@ -67,7 +66,7 @@ group :development do
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   gem 'guard', '~> 2.14'
   gem 'rails-erd'
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false 
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :production do
